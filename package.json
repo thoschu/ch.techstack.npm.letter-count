@@ -1,0 +1,33 @@
+{
+  "name": "letter-count",
+  "version": "1.0.7",
+  "description": "This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
+  "main": "index.js",
+  "bin": "bin/letter-count",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoschu/de.schulte360.npm.letter-count.git"
+  },
+  "keywords": [
+    "letter",
+    "count"
+  ],
+  "author": {
+    "name": "Tom S.",
+    "email": "thoschulte@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thoschu/de.schulte360.npm.letter-count/issues"
+  },
+  "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
+  "preferGlobal": false,
+  "devDependencies": {},
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
+}
