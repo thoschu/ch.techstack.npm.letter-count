@@ -3,13 +3,13 @@ This is a calculator which counts the number of letters in a text, useful for yo
 
 Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
 
-Local installation (npm i --save letter-count):
+Local installation: `npm i --save letter-count`
 ```javascript
 const Util = require('util'), LC = require('letter-count');
 
 Util.log(LC.letterCount("Hamburg - Germany"));
 ```
-Global installation (npm i -g letter-count):
+Global installation: `npm i -g letter-count`
 ```javascript
 letter-count hamburg
 ```
