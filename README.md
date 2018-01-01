@@ -13,3 +13,5 @@ Global installation: `npm i -g letter-count`
 ```javascript
 letter-count hamburg
 ```
+
+[www.npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
