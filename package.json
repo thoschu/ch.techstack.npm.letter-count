@@ -4,7 +4,7 @@
   "description": "This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
   "main": "lib/app.js",
   "bin": "bin/letter-count",
-  "private": false,
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
