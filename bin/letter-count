@@ -3,6 +3,6 @@
 const Util = require('util'),
     R = require('ramda');
 
-let result = R.concat(R.concat(R.nth(-1, R.prop('argv', process)), ' : '), R.toString(require('../lib/index.js').letterCount(R.nth(-1, R.prop('argv', process)))));
+let result = R.concat(R.concat(R.nth(-1, R.prop('argv', process)), ' : '), R.toString(require('../lib/app.js').count(R.nth(-1, R.prop('argv', process)))));
 
 Util.log(result);
