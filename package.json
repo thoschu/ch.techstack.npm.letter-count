@@ -6,7 +6,7 @@
   "bin": "bin/letter-count",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/testrunner.js"
   },
   "repository": {
     "type": "git",
