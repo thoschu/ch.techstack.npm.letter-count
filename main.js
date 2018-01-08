@@ -1,11 +1,11 @@
-/** This is a description of the foo function. */
-function foo() {
-}
-
 
 // const LC = require('./lib/app');
 //
 // console.log(LC.count(' Tom \n S. 11  '));
+
+var http = require('http');
+
+
 
 process.stdin.on('readable', () => {
     /** This is a description of the foo function. */

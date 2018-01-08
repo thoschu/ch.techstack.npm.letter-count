@@ -1,19 +1,14 @@
-const Jasmine = require('jasmine');
-var jasmine = new Jasmine();
+const Jasmine = require('jasmine'),
+    Reporters = require('jasmine-reporters');
+
+let jasmine = new Jasmine();
 
 jasmine.loadConfigFile('spec/support/jasmine.json');
 
-// jasmine.loadConfig({
-//     spec_dir: 'spec',
-//     spec_files: [
-//         'appSpec.js',
-//         'requests/**/*[sS]pec.js',
-//         'utils/**/*[sS]pec.js'
-//     ],
-//     helpers: [
-//         'helpers/**/*.js'
-//     ]
-// });
+// jasmine.getEnv().addReporter(new Reporters.JUnitXmlReporter({
+//     savePath: __dirname,
+//     consolidateAll: false
+// }));
 
 jasmine.configureDefaultReporter({
     // The `timer` passed to the reporter will determine the mechanism for seeing how long the suite takes to run.
@@ -26,7 +21,6 @@ jasmine.configureDefaultReporter({
     showColors: true
 });
 
-
 jasmine.onComplete(function (passed) {
     if (passed) {
         console.log('All specs have passed');
@@ -36,12 +30,3 @@ jasmine.onComplete(function (passed) {
 });
 
 jasmine.execute();
-
-// var Jasmine = require('jasmine');
-// var jasmine = new Jasmine();
-//
-// jasmine.loadConfigFile('spec/support/jasmine.json');
-// jasmine.configureDefaultReporter({
-//     showColors: false
-// });
-// jasmine.execute();

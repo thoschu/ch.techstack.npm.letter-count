@@ -6,7 +6,7 @@
   "bin": "bin/letter-count",
   "private": true,
   "scripts": {
-    "test": "node ./test/testrunner.js",
+    "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=testresults/",
     "doc": "jsdoc ./lib/app.js"
   },
   "repository": {
@@ -28,7 +28,11 @@
   "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
   "preferGlobal": false,
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "jasmine": "^2.8.0",
+    "jasmine-node": "^1.14.5",
+    "jasmine-reporters": "^2.3.0",
+    "jasmine-xml-reporter": "^1.1.0",
     "jsdoc": "^3.5.5"
   },
   "dependencies": {
