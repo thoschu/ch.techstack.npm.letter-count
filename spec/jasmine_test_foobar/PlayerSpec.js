@@ -6,7 +6,7 @@ describe("Player", function() {
 
   beforeEach(function() {
 
-    Util.log(LC);
+
 
   });
 
@@ -16,6 +16,8 @@ describe("Player", function() {
     // expect(player.currentlyPlayingSong).toEqual(song);
     //
     // expect(player).toBePlaying(song);
+      //Util.log(LC);
+      console.log(LC);
   });
 
   describe("when song has been paused", function() {
