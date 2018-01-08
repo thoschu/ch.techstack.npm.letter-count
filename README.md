@@ -9,9 +9,13 @@ const Util = require('util'), LC = require('letter-count');
 
 Util.log(LC.letterCount("Hamburg - Germany"));
 ```
+
 Global installation: `npm i -g letter-count`
 ```javascript
 letter-count hamburg
 ```
 
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
+
+
+[JSDoc](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
