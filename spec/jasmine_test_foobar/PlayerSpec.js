@@ -8,8 +8,8 @@ describe("Test", function () {
     });
 
     it("should be able to count the string", function () {
-        var result = LC.count("thomas").letters;
-        var answer = 7;
+        var result = LC.count("thomasschulte").letters;
+        var answer = 13;
 
         expect(result).toEqual(answer);
     });
