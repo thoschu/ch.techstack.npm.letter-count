@@ -6,7 +6,8 @@
   "bin": "bin/letter-count",
   "private": true,
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "doc": "jsdoc main.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
   "preferGlobal": false,
   "devDependencies": {
-    "jasmine": "^2.8.0"
+    "jasmine": "^2.8.0",
+    "jsdoc": "^3.5.5"
   },
   "dependencies": {
     "ramda": "^0.25.0"

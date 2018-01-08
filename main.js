@@ -3,6 +3,7 @@
 // console.log(LC.count(' Tom \n S. 11  '));
 
 process.stdin.on('readable', () => {
+    /** This is a description of the foo function. */
     let data = process.stdin.read();
 
     console.log(typeof data);
