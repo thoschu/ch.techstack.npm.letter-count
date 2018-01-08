@@ -18,8 +18,7 @@ letter-count hamburg
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
 
 
-[JSDoc](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
+[![jsdoc logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "JSDoc")](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
 
 
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
