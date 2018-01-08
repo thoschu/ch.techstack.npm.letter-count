@@ -6,7 +6,7 @@
   "bin": "bin/letter-count",
   "private": true,
   "scripts": {
-    "test": "jasmine examples"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
