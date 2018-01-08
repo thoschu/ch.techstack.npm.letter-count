@@ -10,7 +10,7 @@ describe("CountTest", function () {
 
     it("should be able to count the string", function () {
         var result = LC.count("thomasschulte").letters;
-        var answer = 13;
+        var answer = 7;
 
         expect(result).toEqual(answer);
     });
