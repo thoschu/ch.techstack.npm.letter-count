@@ -1,8 +1,8 @@
 const Util = require('util'),
     R = require('ramda');
 
-describe("CountTest", function () {
-    var LC;
+describe("letter-count test", function () {
+    var LC = null;
 
     beforeEach(function () {
         LC = require('../../lib/app');
