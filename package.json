@@ -6,7 +6,7 @@
   "bin": "bin/letter-count",
   "private": true,
   "scripts": {
-    "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=testresults/",
+    "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "doc": "jsdoc ./lib/app.js"
   },
   "repository": {
