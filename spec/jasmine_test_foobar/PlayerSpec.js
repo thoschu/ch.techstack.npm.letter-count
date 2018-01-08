@@ -20,7 +20,7 @@ describe("Test", function () {
             // player.pause();
         });
 
-        it("should indicate that the song is currently paused", function () {
+        it("should indicate that the xxx is currently paused", function () {
             // expect(player.isPlaying).toBeFalsy();
             //
             // // demonstrates use of 'not' with a custom matcher
@@ -35,7 +35,7 @@ describe("Test", function () {
     });
 
     // demonstrates use of spies to intercept and test method calls
-    it("tells the current song if the user has made it a favorite", function () {
+    it("tells the current xxx if the user has made it a favorite", function () {
         // spyOn(song, 'persistFavoriteStatus');
         //
         // player.play(song);
@@ -46,7 +46,7 @@ describe("Test", function () {
 
     //demonstrates use of expected exceptions
     describe("#resume", function () {
-        it("should throw an exception if song is already playing", function () {
+        it("should throw an exception if ...", function () {
             // player.play(song);
             //
             // expect(function() {
