@@ -19,3 +19,7 @@ letter-count hamburg
 
 
 [JSDoc](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
+
+
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
