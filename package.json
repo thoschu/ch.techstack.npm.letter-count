@@ -6,8 +6,8 @@
   "bin": "bin/letter-count",
   "private": true,
   "scripts": {
-    "test": "node test/testrunner.js",
-    "doc": "jsdoc main.js"
+    "test": "node ./test/testrunner.js",
+    "doc": "jsdoc ./lib/app.js"
   },
   "repository": {
     "type": "git",

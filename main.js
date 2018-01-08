@@ -1,3 +1,8 @@
+/** This is a description of the foo function. */
+function foo() {
+}
+
+
 // const LC = require('./lib/app');
 //
 // console.log(LC.count(' Tom \n S. 11  '));
