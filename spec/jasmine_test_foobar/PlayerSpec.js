@@ -1,4 +1,5 @@
-const Util = require('util');
+const Util = require('util'),
+    R = require('ramda');
 
 describe("Test", function () {
     var LC = require('../../lib/app');
