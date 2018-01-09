@@ -16,15 +16,15 @@ describe("letter-count test", function () {
         expect(result).toEqual(answer);
     });
 
-    it("should be able to count the number of line in the string", function () {
+    it("should be able to count the number of lines in the string", function () {
         let result = count.lines,
-            answer = 2;
+            answer = 1;
 
         expect(result).toEqual(answer);
     });
 
-    // it("should be able to count the number of line in the string", function () {
-    //     let result = count.lines,
+    // it("should be able to count the number of characters in the string", function () {
+    //     let result = count.chars,
     //         answer = 2;
     //
     //     expect(result).toEqual(answer);
