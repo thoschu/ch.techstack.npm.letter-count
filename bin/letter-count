@@ -1,22 +1,49 @@
 #!/usr/bin/env node
 
-//const Util = require('util'),
-//    R = require('ramda');
-//let result = R.concat(R.concat(R.nth(-1, R.prop('argv', process)), ' : '), R.toString(require('../lib/app.js').count(R.nth(-1, R.prop('argv', process)))));
-//Util.log(result);
-
 const Util = require('util'),
+    Chalk = require('chalk'),
     R = require('ramda'),
     Lc = require('../lib/app.js');
 
 (function (argumentsArr) {
-    let lastElementOfArgumentsArr = R.nth(-1, argumentsArr),
-        label = R.concat(lastElementOfArgumentsArr, ' : '),
-        countResultObject = Lc.count(lastElementOfArgumentsArr),
-        countResultString = R.toString(countResultObject),
-        result = R.concat(label, countResultString);
+    let lengthArgumentsArr = R.length(argumentsArr),
+        res = null,
+        result = null;
 
-    //console.log('\u001b[31m');
+    if (R.equals(lengthArgumentsArr, 2)) {
+        let label = R.concat(Chalk.red.bold(undefined), ' : ');
 
-    Util.log('\u001b[31m' + result + '\u001b[0m');
+        res = R.toString({
+            chars: 0,
+            elements: 0,
+            letters: 0,
+            lines: 0,
+            wordsigns: 0
+        });
+
+        result = R.concat(label, res);
+    } else {
+        let cleanedArgumentsArr = R.drop(2, argumentsArr),
+            lastElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr),
+            optionsArr = R.dropLast(1, cleanedArgumentsArr),
+            optionsArrLength = R.length(optionsArr),
+            label = R.concat(Chalk.blue.bold(lastElementOfArgumentsArr), ' : '),
+            countResultObject = Lc.count(lastElementOfArgumentsArr),
+            chars = Chalk.green(countResultObject.chars),
+            letters = Chalk.green(countResultObject.letters),
+            lines = Chalk.green(countResultObject.lines),
+            wordsigns = Chalk.green(countResultObject.wordsigns);
+
+        res = R.toString({
+            chars: chars,
+            letters: letters,
+            lines: lines,
+            wordsigns: wordsigns
+        });
+
+        //console.log(R.find('-ccc')(R.prop('argv', process)));
+        result = R.concat(label, res);
+    }
+
+    Util.log(result);
 })(R.prop('argv', process));

@@ -8,7 +8,8 @@ Local installation: `npm i --save letter-count`
 const Lc = require('letter-count'),
     Log = console.log;
 
-Log(Lc.count("Hamburg - Germany 137")); //=> { chars: 21, lines: 1, words: 2, numbers: 3, letters: 14, wordsigns: 1 }
+Log(Lc.count("Hamburg - Germany 137")); 
+//=> { chars: 21, lines: 1, words: 2, numbers: 3, letters: 14, wordsigns: 1 }
 
 ```
 
@@ -16,11 +17,18 @@ Log(Lc.count("Hamburg - Germany 137")); //=> { chars: 21, lines: 1, words: 2, nu
 
 To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
+```bash
+$ npm install -g letter-count 
+```
+
 After that you’re able to count from the command line:
 
 ```bash
-npm install -g letter-count
+$ letter-count hamburg 
+1 Jan 23:59:59 - hamburg : {"chars": 7, "letters": 7, "lines": 1, "numbers": 0, "words": 1, "wordsigns": 0}
 ```
+
+## NPM
 
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
 
