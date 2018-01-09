@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
-    "codec": "istanbul report cobertura",
+    "codec": "istanbul report ./node_modules/jasmine-xml-reporter/bin/jasmine.js",
     "doc": "jsdoc ./lib/app.js"
   },
   "repository": {
