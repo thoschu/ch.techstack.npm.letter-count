@@ -1,22 +1,20 @@
 
-// const LC = require('./lib/app');
-//
-// console.log(LC.count(' Tom \n S. 11  '));
+const LC = require('./lib/app');
+
+console.log(LC.count(' Tom \n S. 11  '));
 
 var http = require('http');
 
-
-
-process.stdin.on('readable', () => {
-    /** This is a description of the foo function. */
-    let data = process.stdin.read();
-
-    console.log(typeof data);
-
-    if (data !== null) {
-        process.stdout.write(`Data: ${data}`);
-    }
-});
+// process.stdin.on('readable', () => {
+//     /** This is a description of the foo function. */
+//     let data = process.stdin.read();
+//
+//     console.log(typeof data);
+//
+//     if (data !== null) {
+//         process.stdout.write(`Data: ${data}`);
+//     }
+// });
 
 // var input = "Thomas Schulte";
 //
@@ -28,4 +26,4 @@ process.stdin.on('readable', () => {
 // console.log(words);
 // console.log(lines);
 //
-console.log(process.argv.pop());
+//console.log(process.argv.pop());

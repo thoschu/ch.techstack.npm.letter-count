@@ -5,14 +5,15 @@ Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or 
 
 Local installation: `npm i --save letter-count`
 ```javascript
-const Util = require('util'), LC = require('letter-count');
+const LC = require('letter-count'),
+    Log = console.log;
 
-Util.log(LC.letterCount("Hamburg - Germany"));
+Log(LC.count("Hamburg - Germany")); //=> { chars: 17, lines: 1, elements: 5, letters: 14, wordsigns: 1 }
 ```
 
 Global installation: `npm i -g letter-count`
 ```javascript
-letter-count hamburg
+'letter-count hamburg'
 ```
 
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
