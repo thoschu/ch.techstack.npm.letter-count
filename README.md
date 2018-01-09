@@ -12,9 +12,14 @@ Log(Lc.count("Hamburg - Germany 137")); //=> { chars: 21, lines: 1, words: 2, nu
 
 ```
 
-Global installation: `npm i -g letter-count`
-```javascript
-$ letter-count hamburg
+### Using the `letter-count` binary
+
+To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
+
+After that you’re able to count from the command line:
+
+```bash
+npm install -g letter-count
 ```
 
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
@@ -23,13 +28,6 @@ $ letter-count hamburg
 
 [![jsdoc logo](http://i63.tinypic.com/330yah0.jpg "JSDoc")](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
 
-## Author
-
-| [![twitter/thomas](https://s.gravatar.com/avatar/8c0120205d2e2fc41a13295944574759?s=80)](https://twitter.com/cophax "Follow @cophax on Twitter") |
-|---|
-| [Tom S.](https://server360.io/) |
-
 ## License
 
 This library is available under the [MIT](https://mths.be/mit) license.
-
