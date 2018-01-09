@@ -1,7 +1,7 @@
 
 const LC = require('./lib/app');
 
-console.log(LC.count('tom1 1.1 \n 1 33 \t  sch mama.. '));
+console.log(LC.count('Hamburg - Germany 137'));
 
 var http = require('http');
 
