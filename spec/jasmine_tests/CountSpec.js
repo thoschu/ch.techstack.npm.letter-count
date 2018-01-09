@@ -29,4 +29,18 @@ describe("letter-count test", function () {
 
         expect(0).toEqual(0);
     });
+
+    it("should be able to count the number of elements in the string", function () {
+        let result = count.elements,
+            answer = 2;
+
+        expect(0).toEqual(0);
+    });
+
+    it("should be able to count the number of wordsigns in the string", function () {
+        let result = count.wordsigns,
+            answer = 2;
+
+        expect(0).toEqual(0);
+    });
 });
