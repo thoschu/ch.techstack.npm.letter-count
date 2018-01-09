@@ -1,46 +1,53 @@
 const Util = require('util'),
     R = require('ramda');
 
-describe("letter-count test", function () {
-    let LC = require('../../lib/app')
-        count = LC.count("thomasschulte");
+describe("A. letter-count test", function () {
+    let LC = require('../../lib/app'),
+        counted = LC.count("!thomas \n schulte7 \t hamburg ... ");
 
     beforeEach(function () {
         LC = require('../../lib/app');
     });
 
-    it("should be able to count the number of letters in the string", function () {
-        let result = count.letters,
-            answer = 13;
+    it("1. should be able to count the number of letters in the given string", function () {
+        let result = counted.letters,
+            answer = 20;
 
         expect(result).toEqual(answer);
     });
 
-    it("should be able to count the number of lines in the string", function () {
-        let result = count.lines,
+    it("2. should be able to count the number of lines in the given string", function () {
+        let result = counted.lines,
+            answer = 2;
+
+        expect(result).toEqual(answer);
+    });
+
+    it("3. should be able to count the number of characters in the given string", function () {
+        let result = counted.chars,
+            answer = 33;
+
+        expect(result).toEqual(answer);
+    });
+
+    it("4. should be able to count the number of words in the given string", function () {
+        let result = counted.words,
+            answer = 3;
+
+        expect(result).toEqual(answer);
+    });
+
+    it("5. should be able to count the number of numbers in the given string", function () {
+        let result = counted.numbers,
             answer = 1;
 
         expect(result).toEqual(answer);
     });
 
-    it("should be able to count the number of characters in the string", function () {
-        let result = count.chars,
-            answer = 2;
+    it("6. should be able to count the number of wordsigns in the given string", function () {
+        let result = counted.wordsigns,
+            answer = 4;
 
-        expect(0).toEqual(0);
-    });
-
-    it("should be able to count the number of elements in the string", function () {
-        let result = count.elements,
-            answer = 2;
-
-        expect(0).toEqual(0);
-    });
-
-    it("should be able to count the number of wordsigns in the string", function () {
-        let result = count.wordsigns,
-            answer = 2;
-
-        expect(0).toEqual(0);
+        expect(result).toEqual(answer);
     });
 });
