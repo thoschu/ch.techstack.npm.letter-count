@@ -8,8 +8,7 @@ Local installation: `npm i --save letter-count`
 const Lc = require('letter-count'),
     Log = console.log;
 
-Log(Lc.count("Hamburg - Germany 137")); 
-//=> { chars: 21, lines: 1, words: 2, numbers: 3, letters: 14, wordsigns: 1 }
+Log(Lc.count("Hamburg - Germany 137")); //=> { chars: 21, lines: 1, words: 2, numbers: 3, letters: 14, wordsigns: 1 }
 
 ```
 
@@ -20,8 +19,17 @@ $ letter-count hamburg
 
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
 
+## Doc
 
 [![jsdoc logo](http://i63.tinypic.com/330yah0.jpg "JSDoc")](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
 
+## Author
 
+| [![twitter/thomas](https://s.gravatar.com/avatar/8c0120205d2e2fc41a13295944574759?s=80)](https://twitter.com/cophax "Follow @cophax on Twitter") |
+|---|
+| [Tom S.](https://server360.io/) |
+
+## License
+
+This library is available under the [MIT](https://mths.be/mit) license.
 
