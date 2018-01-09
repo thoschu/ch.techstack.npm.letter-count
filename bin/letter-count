@@ -1,8 +1,22 @@
 #!/usr/bin/env node
 
+//const Util = require('util'),
+//    R = require('ramda');
+//let result = R.concat(R.concat(R.nth(-1, R.prop('argv', process)), ' : '), R.toString(require('../lib/app.js').count(R.nth(-1, R.prop('argv', process)))));
+//Util.log(result);
+
 const Util = require('util'),
-    R = require('ramda');
+    R = require('ramda'),
+    Lc = require('../lib/app.js');
 
-let result = R.concat(R.concat(R.nth(-1, R.prop('argv', process)), ' : '), R.toString(require('../lib/app.js').count(R.nth(-1, R.prop('argv', process)))));
+(function (argumentsArr) {
+    let lastElementOfArgumentsArr = R.nth(-1, argumentsArr),
+        label = R.concat(lastElementOfArgumentsArr, ' : '),
+        countResultObject = Lc.count(lastElementOfArgumentsArr),
+        countResultString = R.toString(countResultObject),
+        result = R.concat(label, countResultString);
 
-Util.log(result);
+    //console.log('\u001b[31m');
+
+    Util.log('\u001b[31m' + result + '\u001b[0m');
+})(R.prop('argv', process));

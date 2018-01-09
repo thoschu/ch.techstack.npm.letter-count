@@ -38,6 +38,7 @@
     "jsdoc": "^3.5.5"
   },
   "dependencies": {
+    "chalk": "^2.3.0",
     "ramda": "^0.25.0"
   }
 }
