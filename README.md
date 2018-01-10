@@ -54,7 +54,11 @@ lc.count("Hamburg - \nGermany 137!");
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
 ```
 
-### Using the `letter-count` binary ![beta](http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg "BETA" {width=32px height=32px})
+![beta](http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg "BETA" {width=32px height=32px})
+
+[[http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg = 32x]]
+
+### Using the `letter-count` binary
 
 To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
