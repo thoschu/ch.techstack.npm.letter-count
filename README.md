@@ -8,9 +8,8 @@ Local installation: `npm i --save letter-count`
 const Lc = require('letter-count'),
     Log = console.log;
 
-Log(Lc.count("Hamburg - Germany 137")); 
-//=> { chars: 21, lines: 1, words: 2, numbers: 3, letters: 14, wordsigns: 1 }
-
+Log(Lc.count("Hamburg - \nGermany 137!")); 
+//=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2 }
 ```
 
 ### Using the `letter-count` binary
