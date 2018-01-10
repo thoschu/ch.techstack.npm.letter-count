@@ -66,7 +66,7 @@ lc.count("Hamburg - \nGermany 137!", '-ws');
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
-### `lc.countFromFile(value, [option])`
+### `lc.countFromFile(file, [option])`
 
 ```javascript
 const Log = console.log;
@@ -111,6 +111,23 @@ lc.countFromFile('/path/to/file.txt', '--letters');
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--wordsigns'); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
+```
+
+### `lc.info([option])`
+
+```javascript
+const Log = console.log;
+
+Log(lc.info()); 
+//=> letter-count
+```
+
+The optional `option` argument accepts a string with the following options:
+
+#### `-n` or `--name` 
+```javascript
+lc.info('--name'); 
+//=> letter-count
 ```
 
 ### Using the `letter-count` binary <img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
