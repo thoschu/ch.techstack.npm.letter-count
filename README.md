@@ -66,6 +66,17 @@ lc.count("Hamburg - \nGermany 137!", '-ws');
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
+### `lc.countFromFile(value, [option])`
+
+```javascript
+const Log = console.log;
+
+Log(lc.countFromFile('/path/to/file.txt')); 
+//=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
+```
+
+The optional `option` argument accepts a string with the following options:
+
 ### Using the `letter-count` binary <img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
 
 To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
