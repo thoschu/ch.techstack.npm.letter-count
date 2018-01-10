@@ -30,7 +30,7 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 
 The optional `option` argument accepts a string with the following options:
 
-#### `-c` or `--char` 
+#### `-c` or `--chars` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-c'); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
@@ -76,6 +76,42 @@ Log(lc.countFromFile('/path/to/file.txt'));
 ```
 
 The optional `option` argument accepts a string with the following options:
+
+#### `-c` or `--chars` 
+```javascript
+lc.countFromFile('/path/to/file.txt', '--chars'); 
+//=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
+```
+
+#### `-ln` or `--lines` 
+```javascript
+lc.countFromFile('/path/to/file.txt', '--lines'); 
+//=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
+```
+
+#### `-w` or `--words` 
+```javascript
+lc.countFromFile('/path/to/file.txt', '--words'); 
+//=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
+```
+
+#### `-n` or `--numbers` 
+```javascript
+lc.countFromFile('/path/to/file.txt', '--numbers'); 
+//=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
+```
+
+#### `-l` or `--letters` 
+```javascript
+lc.countFromFile('/path/to/file.txt', '--letters'); 
+//=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
+```
+
+#### `-ws` or `--wordsigns` 
+```javascript
+lc.countFromFile('/path/to/file.txt', '--wordsigns'); 
+//=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
+```
 
 ### Using the `letter-count` binary <img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
 
