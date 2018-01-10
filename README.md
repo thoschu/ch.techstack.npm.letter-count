@@ -8,7 +8,7 @@ Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or 
 Via [npm](https://www.npmjs.com/):
 
 ```bash
-npm install letter-count
+$ npm install letter-count
 ```
 
 In [Node.js](https://nodejs.org/):
@@ -19,7 +19,7 @@ const lc = require('letter-count');
 
 ## API
 
-### `lc.count([option], value)`
+### `lc.count(value, [option])`
 
 ```javascript
 const Log = console.log;
@@ -32,37 +32,37 @@ The optional `option` argument accepts a string with the following options:
 
 #### `-c` or `--char` 
 ```javascript
-lc.count('-c', "Hamburg - \nGermany 137!"); 
+lc.count("Hamburg - \nGermany 137!", '-c'); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
 #### `-ln` or `--lines` 
 ```javascript
-lc.count('-ln', "Hamburg - \nGermany 137!"); 
+lc.count("Hamburg - \nGermany 137!", '-ln'); 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
 #### `-w` or `--words` 
 ```javascript
-lc.count('-w', "Hamburg - \nGermany 137!"); 
+lc.count("Hamburg - \nGermany 137!", '-w'); 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
 #### `-n` or `--numbers` 
 ```javascript
-lc.count('-n', "Hamburg - \nGermany 137!"); 
+lc.count("Hamburg - \nGermany 137!", '-n'); 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
 #### `-l` or `--letters` 
 ```javascript
-lc.count('-l', "Hamburg - \nGermany 137!"); 
+lc.count("Hamburg - \nGermany 137!", '-l'); 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
 #### `-ws` or `--wordsigns` 
 ```javascript
-lc.count('-ws', "Hamburg - \nGermany 137!"); 
+lc.count("Hamburg - \nGermany 137!", '-ws'); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
