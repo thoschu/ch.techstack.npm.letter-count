@@ -1,7 +1,7 @@
+const LC = require('./lib/app'),
+    R = require('ramda');
 
-const LC = require('./lib/app');
-
-console.log(LC.count('Hamburg - \nGermany 137!', '-a'));
+console.log(LC.count( '-l', 'Hamburg - \nGermany 137!'));
 
 var http = require('http');
 

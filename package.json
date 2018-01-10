@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
+    "md5": "^2.2.1",
     "ramda": "^0.25.0"
   },
   "engines": {
