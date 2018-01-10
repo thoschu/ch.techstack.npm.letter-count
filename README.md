@@ -56,7 +56,7 @@ lc.count("Hamburg - \nGermany 137!");
 
 ![beta](http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg "BETA" {width=32px height=32px})
 
-Here is an inline ![smiley](http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg){:height="36px" width="36px"}.
+<img src="http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg" width="48">
 
 ### Using the `letter-count` binary
 
