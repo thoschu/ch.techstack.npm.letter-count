@@ -54,9 +54,7 @@ lc.count("Hamburg - \nGermany 137!");
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
 ```
 
-![beta](http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg "BETA" {width=32px height=32px})
-
-<img src="http://blog.fundinggates.com/wp-content/uploads/2012/10/quickbooks-beta-test.jpg" width="48">
+<img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
 
 ### Using the `letter-count` binary
 
