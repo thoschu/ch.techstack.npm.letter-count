@@ -130,6 +130,30 @@ lc.info('--name');
 //=> letter-count
 ```
 
+#### `-v` or `--version` 
+```javascript
+lc.info('--version'); 
+//=> x.x.x
+```
+
+#### `-d` or `--description` 
+```javascript
+lc.info('--description'); 
+//=> e.g. Hello world...
+```
+
+#### `-a` or `--author` 
+```javascript
+lc.info('--author'); 
+//=> { name: 'Tom S.', email: 'thoschulte@gmail.com' }
+```
+
+#### `-l` or `--license` 
+```javascript
+lc.info('--license'); 
+//=> MIT
+```
+
 ### Using the `letter-count` binary <img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
 
 To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
