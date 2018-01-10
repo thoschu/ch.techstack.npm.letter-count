@@ -1,5 +1,5 @@
 # de.schulte360.npm.letter-count
-This is a calculator which counts the number of (i.a.) letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
+This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 
 Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
 
@@ -64,6 +64,23 @@ lc.count('-l', "Hamburg - \nGermany 137!");
 ```javascript
 lc.count('-ws', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
+```
+
+### `lc.readFile([option], file)`
+
+```javascript
+const Log = console.log;
+
+Log(lc.readFile('/path/to/file.txt')); 
+//=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
+```
+
+The optional `option` argument accepts a string with the following options:
+
+#### `-c` or `--char` 
+```javascript
+lc.count('-c', '/path/to/file.txt'); 
+//=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
 ### Using the `letter-count` binary <img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
