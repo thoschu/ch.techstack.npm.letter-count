@@ -154,7 +154,7 @@ lc.info('--license');
 //=> MIT
 ```
 
-### Using the `letter-count` binary <img src="https://cdn4.iconfinder.com/data/icons/iconset-addictive-flavour/png/splash_beta_orange.png" width="48">
+### Using the `letter-count` binary
 
 To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
