@@ -19,7 +19,7 @@ const lc = require('letter-count');
 
 ## API
 
-### * `lc.count(value, [option])`
+### `lc.count(value, [option])`
 
 ```javascript
 const Log = console.log;
@@ -119,7 +119,7 @@ lc.countFromFile('/path/to/file.txt', '--wordsigns');
 const Log = console.log;
 
 Log(lc.info()); 
-letter-count.js
+//=> letter-count.js
 ```
 
 The optional `option` argument accepts a string with the following options:
@@ -174,25 +174,43 @@ $ letter-count -c hamburg
 #=> 1 Jan 23:59:59 - hamburg : {"chars": 7}
 ```
 
-To count only the character, use the the `-ln`/`--lines` option:
+To count only the lines, use the the `-ln`/`--lines` option:
 ```bash
 $ letter-count -ln tom s. 
 #=> 1 Jan 12:00:00 - tom s. : {"lines": 1, "origin": "tom s."}
 ```
 
-To count only the character, use the the `-w`/`--words` option:
+To count only the words, use the the `-w`/`--words` option:
 ```bash
 $ letter-count -w tom hamburg 
 #=> 1 Jan 12:00:00 - tom hamburg : {"origin": "tom hamburg", "words": 2}
 ```
 
-To count only the character, use the the `-n`/`--numbers` option:
+To count only the numbers, use the the `-n`/`--numbers` option:
 ```bash
-$ letter-count -n tom 13 
+$ letter-count -n hamburg 20457
 #=> 1 Jan 12:00:00 - hamburg 20457 : {"numbers": 5, "origin": "hamburg 20457"}
 ```
 
+To count only the letters, use the the `-l`/`--letters` option:
+```bash
+$ letter-count -l tom 13 
+#=> 1 Jan 12:00:00 - tom 13 hh : {"letters": 5, "origin": "tom 13 hh"}
+```
 
+To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
+```bash
+$ letter-count -ws germany
+#=> 1 Jan 12:00:00 - germany : {"origin": "germany", "wordsigns": 0}
+```
+
+To count in a file, use the the `-f`/`--file` option and the path to the file:
+```bash
+$ letter-count -f path/to/file/input.txt
+#=> 1 Jan 12:00:00 - test/input.txt : {"chars": 23, "hash": "fdf25c637725818100fae9d635edf787", "letters": 14, "lines": 2, "numbers": 3, "origin": "Hamburg -\r\nGermany 137!", "words": 2, "wordsigns": 2}
+```
+
+***
 
 ## NPM
 
@@ -205,3 +223,5 @@ $ letter-count -n tom 13
 ## License
 
 This library is available under the [MIT](https://mths.be/mit) license.
+
+---
