@@ -19,7 +19,7 @@ const lc = require('letter-count');
 
 ## API
 
-### `lc.count(value, [option])`
+### * `lc.count(value, [option])`
 
 ```javascript
 const Log = console.log;
@@ -119,7 +119,7 @@ lc.countFromFile('/path/to/file.txt', '--wordsigns');
 const Log = console.log;
 
 Log(lc.info()); 
-//=> letter-count
+letter-count.js
 ```
 
 The optional `option` argument accepts a string with the following options:
@@ -173,6 +173,26 @@ To count only the character, use the the `-c`/`--char` option:
 $ letter-count -c hamburg 
 #=> 1 Jan 23:59:59 - hamburg : {"chars": 7}
 ```
+
+To count only the character, use the the `-ln`/`--lines` option:
+```bash
+$ letter-count -ln tom s. 
+#=> 1 Jan 12:00:00 - tom s. : {"lines": 1, "origin": "tom s."}
+```
+
+To count only the character, use the the `-w`/`--words` option:
+```bash
+$ letter-count -w tom hamburg 
+#=> 1 Jan 12:00:00 - tom hamburg : {"origin": "tom hamburg", "words": 2}
+```
+
+To count only the character, use the the `-n`/`--numbers` option:
+```bash
+$ letter-count -n tom 13 
+#=> 1 Jan 12:00:00 - hamburg 20457 : {"numbers": 5, "origin": "hamburg 20457"}
+```
+
+
 
 ## NPM
 

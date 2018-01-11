@@ -1,7 +1,7 @@
 const Util = require('util'),
     R = require('ramda');
 
-describe("letter-count tests", function () {
+describe("letter-count.js tests", function () {
     let LC = require('../../lib/app'),
         counted = null;
 
