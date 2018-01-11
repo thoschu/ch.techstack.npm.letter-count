@@ -53,6 +53,10 @@ const Util = require('util'),
                 resultString = '';
 
             switch (option) {
+                case '-a':
+                case '--all':
+                    option = '-a';
+                    break;
                 case '-c':
                 case '--chars':
                     option = '-c';
@@ -86,56 +90,31 @@ const Util = require('util'),
                     option = '-a';
             }
 
-            console.log(option);
-            console.log(cleanedArgumentsArr);
-            console.log(inputArr);
+            let lastElementOfInputArr = R.last(inputArr);
 
             R.forEach(x => {
-                let tempStr = R.concat(x, ' ');
+                let tempStr = null;
+
+                if (R.equals(x, lastElementOfInputArr)) {
+                    tempStr = x;
+                } else {
+                    tempStr = R.concat(x, ' ');
+                }
+
                 resultString = R.concat(resultString, tempStr);
             }, inputArr);
+
 
             let label = R.concat(Chalk.blue.bold(resultString), ' : '),
                 resultObject = null;
 
             if(R.equals(option, '-f')) {
-                resultObject = Lc.count(resultString, option);
+                resultObject = Lc.countFromFile(resultString, option);
             } else {
                 resultObject = Lc.count(resultString, option);
             }
 
-            console.log(resultObject);
-
-
-
-                // chars = Chalk.green(countResultObject.chars),
-                // letters = Chalk.green(countResultObject.letters),
-                // lines = Chalk.green(countResultObject.lines),
-                // words = Chalk.green(countResultObject.words),
-                // wordsigns = Chalk.green(countResultObject.wordsigns);
-
-            // switch(expression) {
-            //     case n:
-            //         code block
-            //         break;
-            //     case n:
-            //         code block
-            //         break;
-            //     default:
-            //         code block
-            // }
-
-            // resultObject = {
-            //     // chars: chars,
-            //     // letters: letters,
-            //     // lines: lines,
-            //     // words: words,
-            //     // wordsigns: wordsigns
-            // };
-            //
-            // result = R.concat(label, R.toString(resultObject));
-
-
+            result = R.concat(label, R.toString(resultObject));
         }
     }
 
