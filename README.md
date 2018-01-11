@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
-[![Dependency Status](https://david-dm.org/thoschu/letter-count.svg)](https://david-dm.org/mikechabot/letter-count)
-[![Dev Dependency Status](https://david-dm.org/thoschu/letter-count/dev-status.svg)](https://david-dm.org/mikechabot/letter-count?type=dev)
+[![Dependency Status](https://david-dm.org/thoschu/letter-count.svg)](https://david-dm.org/thoschu/letter-count)
+[![Dev Dependency Status](https://david-dm.org/thoschu/letter-count/dev-status.svg)](https://david-dm.org/thoschu/letter-count?type=dev)
 
 # de.schulte360.npm.letter-count
 This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
