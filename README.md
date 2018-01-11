@@ -217,20 +217,24 @@ $ letter-count -f path/to/file/input.txt
 ***
 
 ## NPM
+
 [https://npmjs.com/package/letter-count](https://www.npmjs.com/package/letter-count)
 
 ***
 
 ## Doc
+
 [![jsdoc logo](http://i63.tinypic.com/330yah0.jpg "JSDoc")](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
 
 ***
 
 ## RinKit
+
 [https://npm.runkit.com/letter-count](https://npm.runkit.com/letter-count)
 
 ***
 
 ## License
+
 This library is available under the [MIT](https://mths.be/mit) license.
 ---
