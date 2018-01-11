@@ -1,3 +1,7 @@
+[![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
+[![Dependency Status](https://david-dm.org/mikechabot/letter-count.svg)](https://david-dm.org/mikechabot/letter-count)
+[![Dev Dependency Status](https://david-dm.org/mikechabot/letter-count/dev-status.svg)](https://david-dm.org/mikechabot/letter-count?type=dev)
+
 # de.schulte360.npm.letter-count
 This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 
@@ -194,7 +198,7 @@ $ letter-count -n hamburg 20457
 
 To count only the letters, use the the `-l`/`--letters` option:
 ```bash
-$ letter-count -l tom 13 
+$ letter-count -l tom 13 hh
 #=> 1 Jan 12:00:00 - tom 13 hh : {"letters": 5, "origin": "tom 13 hh"}
 ```
 
