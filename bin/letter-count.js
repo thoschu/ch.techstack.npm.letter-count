@@ -48,21 +48,71 @@ const Util = require('util'),
 
             result = R.concat(label, R.toString(resultObject));
         } else {
-            let cleanedCleanedArgumentsArr = R.drop(1, cleanedArgumentsArr),
+            let option = R.nth(0, cleanedArgumentsArr),
+                inputArr = R.drop(1, cleanedArgumentsArr),
                 resultString = '';
+
+            switch (option) {
+                case '-c':
+                case '--chars':
+                    option = '-c';
+                    break;
+                case '-ln':
+                case '--lines':
+                    option = '-ln';
+                    break;
+                case '-w':
+                case '--words':
+                    option = '-w';
+                    break;
+                case '-n':
+                case '--numbers':
+                    option = '-n';
+                    break;
+                case '-l':
+                case '--letters':
+                    option = '-l';
+                    break;
+                case '-ws':
+                case '--wordsigns':
+                    option = '-ws';
+                    break;
+                case '-f':
+                case '--file':
+                    option = '-f';
+                    break;
+                default:
+                    inputArr = R.prepend(option, inputArr);
+                    option = '-a';
+            }
+
+            console.log(option);
+            console.log(cleanedArgumentsArr);
+            console.log(inputArr);
 
             R.forEach(x => {
                 let tempStr = R.concat(x, ' ');
                 resultString = R.concat(resultString, tempStr);
-            }, cleanedCleanedArgumentsArr);
+            }, inputArr);
 
             let label = R.concat(Chalk.blue.bold(resultString), ' : '),
-                countResultObject = Lc.count(resultString),
-                chars = Chalk.green(countResultObject.chars),
-                letters = Chalk.green(countResultObject.letters),
-                lines = Chalk.green(countResultObject.lines),
-                words = Chalk.green(countResultObject.words),
-                wordsigns = Chalk.green(countResultObject.wordsigns);
+                resultObject = null;
+
+            if(R.equals(option, '-f')) {
+                resultObject = Lc.count(resultString, option);
+            } else {
+                resultObject = Lc.count(resultString, option);
+            }
+
+            console.log(resultObject);
+
+
+
+                // chars = Chalk.green(countResultObject.chars),
+                // letters = Chalk.green(countResultObject.letters),
+                // lines = Chalk.green(countResultObject.lines),
+                // words = Chalk.green(countResultObject.words),
+                // wordsigns = Chalk.green(countResultObject.wordsigns);
 
             // switch(expression) {
             //     case n:
@@ -75,17 +125,17 @@ const Util = require('util'),
             //         code block
             // }
 
-            resultObject = {
-                chars: chars,
-                letters: letters,
-                lines: lines,
-                words: words,
-                wordsigns: wordsigns
-            };
+            // resultObject = {
+            //     // chars: chars,
+            //     // letters: letters,
+            //     // lines: lines,
+            //     // words: words,
+            //     // wordsigns: wordsigns
+            // };
+            //
+            // result = R.concat(label, R.toString(resultObject));
 
-            result = R.concat(label, R.toString(resultObject));
 
-            console.log(resultString);
         }
     }
 
