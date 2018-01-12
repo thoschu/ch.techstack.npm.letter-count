@@ -3,12 +3,13 @@
 const Util = require('util'),
     Chalk = require('chalk'),
     R = require('ramda'),
-    Lc = require('../lib/app.js');
+    Lc = require('../lib/app.js'),
+    N = R.always(null);
 
 (function (argumentsArr) {
     let lengthArgumentsArr = R.length(argumentsArr),
-        resultObject = null,
-        result = null;
+        resultObject = N(),
+        result = N();
 
     if (R.equals(lengthArgumentsArr, 2)) {
         let label = R.concat(Chalk.red.bold(undefined), ' : '),
@@ -94,7 +95,7 @@ const Util = require('util'),
                 whiteSpace = ' ';
 
             R.forEach(x => {
-                let tempStr = null;
+                let tempStr = N();
 
                 if (R.equals(x, lastElementOfInputArr)) {
                     tempStr = x;
@@ -108,7 +109,7 @@ const Util = require('util'),
 
             let chalkedResultString = Chalk.blue.bold(resultString),
                 label = R.concat(chalkedResultString, ' : '),
-                resultObject = null;
+                resultObject = N();
 
             if(R.equals(option, '-f')) {
                 resultObject = Lc.countFromFile(resultString, option);
