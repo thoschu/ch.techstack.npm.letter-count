@@ -30,6 +30,7 @@
   "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
   "preferGlobal": false,
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "istanbul": "^0.4.5",
     "jasmine": "^2.8.0",
     "jasmine-node": "^1.14.5",
