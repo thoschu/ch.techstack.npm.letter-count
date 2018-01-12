@@ -3,7 +3,7 @@
 const Util = require('util'),
     Chalk = require('chalk'),
     R = require('ramda'),
-    Lc = require('../lib/app.js');
+    Lc = require('./lib/app.js');
 
 (function (argumentsArr) {
     let lengthArgumentsArr = R.length(argumentsArr),
