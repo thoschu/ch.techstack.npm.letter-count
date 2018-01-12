@@ -90,7 +90,8 @@ const Util = require('util'),
                     option = '-a';
             }
 
-            let lastElementOfInputArr = R.last(inputArr);
+            let lastElementOfInputArr = R.last(inputArr),
+                whiteSpace = ' ';
 
             R.forEach(x => {
                 let tempStr = null;
@@ -98,14 +99,15 @@ const Util = require('util'),
                 if (R.equals(x, lastElementOfInputArr)) {
                     tempStr = x;
                 } else {
-                    tempStr = R.concat(x, ' ');
+                    tempStr = R.concat(x, whiteSpace);
                 }
 
                 resultString = R.concat(resultString, tempStr);
             }, inputArr);
 
 
-            let label = R.concat(Chalk.blue.bold(resultString), ' : '),
+            let chalkedResultString = Chalk.blue.bold(resultString),
+                label = R.concat(chalkedResultString, ' : '),
                 resultObject = null;
 
             if(R.equals(option, '-f')) {
