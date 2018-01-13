@@ -2,6 +2,7 @@
 [![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
 [![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
 [![Build Status](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count.svg?branch=master)](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count)
+
 [![NPM Badge](https://nodei.co/npm/letter-count.png?downloads=true)](https://www.npmjs.com/package/letter-count)
 
 # de.schulte360.npm.letter-count
