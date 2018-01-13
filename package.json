@@ -9,7 +9,7 @@
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
     "doc": "jsdoc ./lib/app.js",
-    "build": "echo \"Error: no build job specified\" && exit 1"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   "preferGlobal": false,
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "gulp": "^4.0.0",
     "istanbul": "^0.4.5",
     "jasmine": "^2.8.0",
     "jasmine-node": "^1.14.5",
