@@ -1,12 +1,11 @@
 {
   "name": "letter-count",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
   "main": "lib/app.js",
   "bin": "bin/letter-count.js",
   "private": false,
   "scripts": {
-    "publish": "npmignore",
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
     "doc": "jsdoc ./lib/app.js"
@@ -41,7 +40,6 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "md5": "^2.2.1",
-    "npmignore": "^0.2.0",
     "ramda": "^0.25.0"
   },
   "engines": {

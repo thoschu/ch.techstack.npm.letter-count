@@ -1,48 +1,19 @@
 {
   "name": "letter-count",
-  "version": "1.4.2",
   "description": "This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
   "main": "lib/app.js",
-  "bin": "bin/letter-count.js",
-  "private": false,
-  "scripts": {
-    "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
-    "codec": "istanbul cover ./node_modules/jasmine/bin/jasmine.js",
-    "coder": "istanbul report cobertura",
-    "doc": "jsdoc ./lib/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thoschu/de.schulte360.npm.letter-count.git"
-  },
+  "authors": "Tom S. <thoschulte@gmail.com>",
+  "license": "MIT",
   "keywords": [
     "letter",
     "count"
   ],
-  "author": {
-    "name": "Tom S.",
-    "email": "thoschulte@gmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thoschu/de.schulte360.npm.letter-count/issues"
-  },
-  "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
-  "preferGlobal": false,
-  "devDependencies": {
-    "istanbul": "^0.4.5",
-    "jasmine": "^2.8.0",
-    "jasmine-node": "^1.14.5",
-    "jasmine-reporters": "^2.3.0",
-    "jasmine-xml-reporter": "^1.1.0",
-    "jsdoc": "^3.5.5"
-  },
-  "dependencies": {
-    "chalk": "^2.3.0",
-    "md5": "^2.2.1",
-    "ramda": "^0.25.0"
-  },
-  "engines": {
-    "node": ">=6"
-  }
+  "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
