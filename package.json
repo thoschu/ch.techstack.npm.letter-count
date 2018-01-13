@@ -9,7 +9,7 @@
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "codec": "istanbul cover ./node_modules/jasmine/bin/jasmine.js",
     "coder": "istanbul report cobertura",
-    "code" : "concurrently -k \"npm codec\" \"npm coder\"",
+    "code" : "concurrently \"npm run codec\" \"npm run coder\"",
     "doc": "jsdoc ./lib/app.js"
   },
   "repository": {
