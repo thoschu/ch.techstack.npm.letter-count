@@ -6,7 +6,19 @@
   "license": "MIT",
   "keywords": [
     "letter",
-    "count"
+    "count",
+    "count letters",
+    "count characters",
+    "count lines",
+    "count words",
+    "count numbers",
+    "count wordsigns",
+    "letters",
+    "characters",
+    "lines",
+    "words",
+    "numbers",
+    "wordsigns"
   ],
   "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count",
   "ignore": [
