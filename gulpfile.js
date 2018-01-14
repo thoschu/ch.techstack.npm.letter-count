@@ -1,20 +1,34 @@
-const gulp = require('gulp');
+const gulp = require('gulp'),
+    shell = require('shelljs');
 
 gulp.task('default', defaultTask);
 
 function defaultTask(done) {
+    shell.rm('-rf', 'build');
+
     gulp.src([
         'README.md',
         'package.json',
         'npm-shrinkwrap.json',
         'LICENSE',
-        'gulpfile.js',
-        '.npmignore',
-        '.gitignore',
-        'test',
-        'spec',
-        'lib'
     ]).pipe(gulp.dest('./build'));
+
+    gulp.src([
+        'bin/letter-count',
+        'bin/letter-count.js'
+    ]).pipe(gulp.dest('./build/bin'));
+
+    gulp.src('lib/app.js').pipe(gulp.dest('./build/lib'));
+
+    gulp.src([
+        'test/input.txt',
+        'test/testrunner.js'
+    ]).pipe(gulp.dest('./build/test'));
+
+    gulp.src('spec/**/*').pipe(gulp.dest('./build/spec'));
 
     done();
 };
+
+
+
