@@ -26,7 +26,9 @@ const lc = require('letter-count');
 
 ## API
 
-### `lc.count(value, [option])`
+### Count foobar test
+
+#### `lc.count(value, [option])`
 
 ```javascript
 const Log = console.log;

@@ -1,21 +1,22 @@
 const gulp = require('gulp'),
-    shell = require('shelljs');
+    shell = require('shelljs'),
 
+    tar = require('gulp-tar'),
+    gzip = require('gulp-gzip');
 
-const tar = require('gulp-tar');
-const gzip = require('gulp-gzip');
-
-gulp.task('default', defaultTask);
-
-function defaultTask(done) {
+function clearTask(done) {
     shell.rm('-rf', 'build');
 
+    done();
+};
+
+function copyTask(done) {
     gulp.src([
         'README.md',
         'package.json',
         'npm-shrinkwrap.json',
         'LICENSE',
-    ]).pipe(gulp.dest('./build'));
+    ]).pipe(gulp.dest('build'));
 
     gulp.src([
         'bin/letter-count',
@@ -31,6 +32,10 @@ function defaultTask(done) {
 
     gulp.src('spec/**/*').pipe(gulp.dest('build/spec'));
 
+    done();
+};
+
+function zipTask(done) {
     gulp.src('build/*')
         .pipe(tar('letter-count.tgz'))
         //.pipe(gzip())
@@ -39,5 +44,11 @@ function defaultTask(done) {
     done();
 };
 
+gulp.task('clear', clearTask);
+gulp.task('copy', copyTask);
+gulp.task('zip', zipTask);
 
-
+gulp.task('default', gulp.series( 'zip', function (done) {
+    // do more stuff
+    done();
+}));
