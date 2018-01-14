@@ -223,7 +223,7 @@ $ letter-count hamburg
 ##### To count only the character, use the the `-c`/`--char` option:
 ```bash
 $ letter-count -c hamburg 
-#=> 1 Jan 23:59:59 - hamburg : {"chars": 7}
+#=> 1 Jan 23:59:59 - hamburg : {"chars": 7, "origin": "hamburg"}
 ```
 
 ##### To count only the lines, use the the `-ln`/`--lines` option:
@@ -235,7 +235,7 @@ $ letter-count -ln tom s.
 ##### To count only the words, use the the `-w`/`--words` option:
 ```bash
 $ letter-count -w tom hamburg 
-#=> 1 Jan 12:00:00 - tom hamburg : {"origin": "tom hamburg", "words": 2}
+#=> 1 Jan 12:00:00 - tom hamburg : {"words": 2, "origin": "tom hamburg"}
 ```
 
 ##### To count only the numbers, use the the `-n`/`--numbers` option:
@@ -253,7 +253,7 @@ $ letter-count -l tom 13 hh
 ##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
 ```bash
 $ letter-count -ws germany!
-#=> 1 Jan 12:00:00 - germany! : {"origin": "germany!", "wordsigns": 1}
+#=> 1 Jan 12:00:00 - germany! : {"wordsigns": 1, "origin": "germany!"}
 ```
 
 ##### To count in a file, use the the `-f`/`--file` option and the path to the file:
