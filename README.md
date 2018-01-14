@@ -10,6 +10,7 @@ This is a calculator which counts the number of letters/characters/lines/words/n
 
 Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
 
+
 ## Installation
 
 Via [npm](https://www.npmjs.com/):
@@ -24,6 +25,7 @@ In [Node.js](https://nodejs.org/):
 const lc = require('letter-count');
 ```
 
+
 ## API
 
 ## `lc.count(value, [option])`
@@ -34,6 +36,7 @@ const Log = console.log;
 Log(lc.count("Hamburg - \nGermany 137!")); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
 ```
+
 
 ### The optional `option` argument accepts a string with the following options:
 
@@ -87,6 +90,7 @@ const Log = console.log;
 Log(lc.countFromFile('/path/to/file.txt')); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
 ```
+
 
 ### The optional `option` argument accepts a string with the following options:
 
@@ -147,6 +151,7 @@ Log(lc.info());
 //  }
 ```
 
+
 ### The optional `option` argument accepts a string with the following options:
 
 #### Returns only the project name:
@@ -183,6 +188,7 @@ lc.info('--author');
 lc.info('--license'); 
 //=> MIT
 ```
+
 
 ### Using the `letter-count` binary
 
