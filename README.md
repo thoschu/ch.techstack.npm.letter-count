@@ -45,7 +45,7 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 //  }
 ```
 
-### ╳ The optional `option` argument accepts a string with the following options:
+### ➔ The optional `option` argument accepts a string with the following options:
 
 #### Counts only the characters:
 ##### `-c` or `--chars` 
@@ -107,7 +107,7 @@ Log(lc.countFromFile('/path/to/file.txt'));
 // }
 ```
 
-### ╳ The optional `option` argument accepts a string with the following options:
+### ➔ The optional `option` argument accepts a string with the following options:
 
 #### Counts only the characters:
 ##### `-c` or `--chars` 
@@ -169,7 +169,7 @@ Log(lc.info());
 //  }
 ```
 
-### ╳ The optional `option` argument accepts a string with the following options:
+### ➔ The optional `option` argument accepts a string with the following options:
 
 #### Returns only the project name:
 ##### `-n` or `--name` 
@@ -206,7 +206,7 @@ lc.info('--license');
 //=> MIT
 ```
 
-### Using the `letter-count` binary
+### ╳ Using the `letter-count` binary ╳
 
 #### To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
