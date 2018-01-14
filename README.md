@@ -45,7 +45,7 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 //  }
 ```
 
-### → The optional `option` argument accepts a string with the following options:
+### ℹ The optional `option` argument accepts a string with the following options:
 
 #### Counts only the characters:
 ##### `-c` or `--chars` 
