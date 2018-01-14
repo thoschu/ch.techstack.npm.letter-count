@@ -58,21 +58,21 @@ lc.count("Hamburg - \nGermany 137!", '-w');
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
-#### Counts only the numbers;
+#### Counts only the numbers:
 ##### `-n` or `--numbers` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-n'); 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
-#### Counts only the letters;
+#### Counts only the letters:
 ##### `-l` or `--letters` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-l'); 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
-#### Counts only the words sings;
+#### Counts only the words sings:
 ##### `-ws` or `--wordsigns` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-ws'); 
@@ -90,37 +90,43 @@ Log(lc.countFromFile('/path/to/file.txt'));
 
 ### The optional `option` argument accepts a string with the following options:
 
-#### `-c` or `--chars` 
+#### Counts only the characters:
+##### `-c` or `--chars` 
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--chars'); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
-#### `-ln` or `--lines` 
+#### Counts only the lines:
+##### `-ln` or `--lines` 
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--lines'); 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
-#### `-w` or `--words` 
+#### Counts only the words:
+##### `-w` or `--words` 
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--words'); 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
-#### `-n` or `--numbers` 
+#### Counts only the numbers:
+##### `-n` or `--numbers` 
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--numbers'); 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
-#### `-l` or `--letters` 
+#### Counts only the letters:
+##### `-l` or `--letters` 
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--letters'); 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
-#### `-ws` or `--wordsigns` 
+#### Counts only the word signs:
+##### `-ws` or `--wordsigns` 
 ```javascript
 lc.countFromFile('/path/to/file.txt', '--wordsigns'); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
@@ -132,36 +138,47 @@ lc.countFromFile('/path/to/file.txt', '--wordsigns');
 const Log = console.log;
 
 Log(lc.info()); 
-//=> letter-count.js
+//=>  { 
+//      name: 'letter-count',
+//      version: 'x.x.x',
+//      description: 'This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
+//      author: { name: 'Tom S.', email: 'thoschulte@gmail.com' },
+//      license: 'MIT' 
+//  }
 ```
 
 ### The optional `option` argument accepts a string with the following options:
 
-#### `-n` or `--name` 
+#### Returns only the project name:
+##### `-n` or `--name` 
 ```javascript
 lc.info('--name'); 
 //=> letter-count
 ```
 
-#### `-v` or `--version` 
+#### Returns only the project version:
+##### `-v` or `--version` 
 ```javascript
 lc.info('--version'); 
 //=> x.x.x
 ```
 
-#### `-d` or `--description` 
+#### Returns only the project description:
+##### `-d` or `--description` 
 ```javascript
 lc.info('--description'); 
 //=> e.g. Hello world...
 ```
 
-#### `-a` or `--author` 
+#### Returns only the project author:
+##### `-a` or `--author` 
 ```javascript
 lc.info('--author'); 
 //=> { name: 'Tom S.', email: 'thoschulte@gmail.com' }
 ```
 
-#### `-l` or `--license` 
+#### Returns only the project license:
+##### `-l` or `--license` 
 ```javascript
 lc.info('--license'); 
 //=> MIT
@@ -169,55 +186,55 @@ lc.info('--license');
 
 ### Using the `letter-count` binary
 
-To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
+#### To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
 ```bash
 $ npm install -g letter-count 
 ```
 
-After that you’re able to count from the command line:
+##### After that you’re able to count from the command line:
 ```bash
 $ letter-count hamburg 
 #=> 1 Jan 23:59:59 - hamburg : {"chars": 7, "letters": 7, "lines": 1, "numbers": 0, "words": 1, "wordsigns": 0}
 ```
 
-To count only the character, use the the `-c`/`--char` option:
+##### To count only the character, use the the `-c`/`--char` option:
 ```bash
 $ letter-count -c hamburg 
 #=> 1 Jan 23:59:59 - hamburg : {"chars": 7}
 ```
 
-To count only the lines, use the the `-ln`/`--lines` option:
+##### To count only the lines, use the the `-ln`/`--lines` option:
 ```bash
 $ letter-count -ln tom s. 
 #=> 1 Jan 12:00:00 - tom s. : {"lines": 1, "origin": "tom s."}
 ```
 
-To count only the words, use the the `-w`/`--words` option:
+##### To count only the words, use the the `-w`/`--words` option:
 ```bash
 $ letter-count -w tom hamburg 
 #=> 1 Jan 12:00:00 - tom hamburg : {"origin": "tom hamburg", "words": 2}
 ```
 
-To count only the numbers, use the the `-n`/`--numbers` option:
+##### To count only the numbers, use the the `-n`/`--numbers` option:
 ```bash
 $ letter-count -n hamburg 20457
 #=> 1 Jan 12:00:00 - hamburg 20457 : {"numbers": 5, "origin": "hamburg 20457"}
 ```
 
-To count only the letters, use the the `-l`/`--letters` option:
+##### To count only the letters, use the the `-l`/`--letters` option:
 ```bash
 $ letter-count -l tom 13 hh
 #=> 1 Jan 12:00:00 - tom 13 hh : {"letters": 5, "origin": "tom 13 hh"}
 ```
 
-To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
+##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
 ```bash
 $ letter-count -ws germany
 #=> 1 Jan 12:00:00 - germany : {"origin": "germany", "wordsigns": 0}
 ```
 
-To count in a file, use the the `-f`/`--file` option and the path to the file:
+##### To count in a file, use the the `-f`/`--file` option and the path to the file:
 ```bash
 $ letter-count -f path/to/file/input.txt
 #=> 1 Jan 12:00:00 - test/input.txt : {"chars": 23, "hash": "fdf25c637725818100fae9d635edf787", "letters": 14, "lines": 2, "numbers": 3, "origin": "Hamburg -\r\nGermany 137!", "words": 2, "wordsigns": 2}

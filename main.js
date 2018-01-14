@@ -4,7 +4,7 @@ const LC = require('./lib/app'),
 // console.log(LC);
 // console.log(LC.count( 'Hamburg -\r\nGermany 137!', '-c'));
 // console.log(LC.countFromFile('test/input.txt', '-a'));
-// console.log(LC.info());
+ console.log(LC.info());
 
 // var http = require('http');
 //
