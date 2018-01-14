@@ -160,7 +160,7 @@ Log(lc.info());
 //=>  { 
 //      name: 'letter-count',
 //      version: 'x.x.x',
-//      description: 'This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
+//      description: 'This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
 //      author: { 
 //          name: 'Tom S.', 
 //          email: 'thoschulte@gmail.com' 
@@ -252,8 +252,8 @@ $ letter-count -l tom 13 hh
 
 ##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
 ```bash
-$ letter-count -ws germany
-#=> 1 Jan 12:00:00 - germany : {"origin": "germany", "wordsigns": 0}
+$ letter-count -ws germany!
+#=> 1 Jan 12:00:00 - germany! : {"origin": "germany!", "wordsigns": 1}
 ```
 
 ##### To count in a file, use the the `-f`/`--file` option and the path to the file:
