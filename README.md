@@ -26,8 +26,6 @@ const lc = require('letter-count');
 
 ## API
 
-### Count foobar test
-
 #### `lc.count(value, [option])`
 
 ```javascript
@@ -37,7 +35,7 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
 ```
 
-The optional `option` argument accepts a string with the following options:
+### The optional `option` argument accepts a string with the following options:
 
 #### `-c` or `--chars` 
 ```javascript
