@@ -44,6 +44,8 @@
   "devDependencies": {
     "concurrently": "^3.5.1",
     "gulp": "^4.0.0",
+    "gulp-gzip": "^1.4.1",
+    "gulp-tar": "^2.1.0",
     "istanbul": "^0.4.5",
     "jasmine": "^2.8.0",
     "jasmine-node": "^1.14.5",
