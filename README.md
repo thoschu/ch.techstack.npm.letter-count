@@ -208,7 +208,7 @@ lc.info('--license');
 
 ## Using the `letter-count` binary
 
-### To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
+#### To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
 ```bash
 $ npm install -g letter-count 
