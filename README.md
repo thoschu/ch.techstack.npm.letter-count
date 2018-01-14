@@ -45,7 +45,7 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 //  }
 ```
 
-### ℹ The optional `option` argument accepts a string with the following options:
+### ╳ The optional `option` argument accepts a string with the following options:
 
 #### Counts only the characters:
 ##### `-c` or `--chars` 
@@ -169,7 +169,7 @@ Log(lc.info());
 //  }
 ```
 
-### → The optional `option` argument accepts a string with the following options:
+### ╳ The optional `option` argument accepts a string with the following options:
 
 #### Returns only the project name:
 ##### `-n` or `--name` 
