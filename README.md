@@ -25,7 +25,6 @@ In [Node.js](https://nodejs.org/):
 const lc = require('letter-count');
 ```
 
-
 ## API
 
 ## `lc.count(value, [option])`
@@ -34,9 +33,17 @@ const lc = require('letter-count');
 const Log = console.log;
 
 Log(lc.count("Hamburg - \nGermany 137!")); 
-//=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
+//=> { 
+//      origin: 'Hamburg - \nGermany 137!', 
+//      chars: 23, 
+//      lines: 2, 
+//      words: 2, 
+//      numbers: 3, 
+//      letters: 14, 
+//      wordsigns: 2, 
+//      hash: 'd559d4e0ad0770ec6940e6892a9c921b' 
+//  }
 ```
-
 
 ### The optional `option` argument accepts a string with the following options:
 
@@ -88,9 +95,17 @@ lc.count("Hamburg - \nGermany 137!", '-ws');
 const Log = console.log;
 
 Log(lc.countFromFile('/path/to/file.txt')); 
-//=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
+//=> { 
+//      origin: 'Hamburg - \nGermany 137!', 
+//      chars: 23, 
+//      lines: 2, 
+//      words: 2, 
+//      numbers: 3, 
+//      letters: 14,
+//      wordsigns: 2, 
+//      hash: 'd559d4e0ad0770ec6940e6892a9c921b' 
+// }
 ```
-
 
 ### The optional `option` argument accepts a string with the following options:
 
@@ -146,11 +161,13 @@ Log(lc.info());
 //      name: 'letter-count',
 //      version: 'x.x.x',
 //      description: 'This is a calculator which counts the number of letters in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
-//      author: { name: 'Tom S.', email: 'thoschulte@gmail.com' },
+//      author: { 
+//          name: 'Tom S.', 
+//          email: 'thoschulte@gmail.com' 
+//      },
 //      license: 'MIT' 
 //  }
 ```
-
 
 ### The optional `option` argument accepts a string with the following options:
 
@@ -188,7 +205,6 @@ lc.info('--author');
 lc.info('--license'); 
 //=> MIT
 ```
-
 
 ### Using the `letter-count` binary
 
