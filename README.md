@@ -198,7 +198,7 @@ lc.info('--license');
 $ npm install -g letter-count 
 ```
 
-##### After that you’re able to count from the command line:
+#### After that you’re able to count from the command line:
 ```bash
 $ letter-count hamburg 
 #=> 1 Jan 23:59:59 - hamburg : {"chars": 7, "letters": 7, "lines": 1, "numbers": 0, "words": 1, "wordsigns": 0}
