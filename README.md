@@ -47,7 +47,7 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 
 ### ➔ The optional `option` argument accepts a string with the following options:
 
-#### ⚫ Counts only the characters:
+#### ⚬ Counts only the characters:
 ##### `-c` or `--chars` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-c'); 
