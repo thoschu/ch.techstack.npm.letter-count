@@ -24,7 +24,7 @@ In [Node.js](https://nodejs.org/):
 const lc = require('letter-count');
 ```
 
-# API
+## API
 
 ## `lc.count(value, [option])`
 
