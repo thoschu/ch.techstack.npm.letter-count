@@ -107,7 +107,7 @@ Log(lc.countFromFile('/path/to/file.txt'));
 // }
 ```
 
-### → The optional `option` argument accepts a string with the following options:
+### ╳ The optional `option` argument accepts a string with the following options:
 
 #### Counts only the characters:
 ##### `-c` or `--chars` 
