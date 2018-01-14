@@ -24,9 +24,9 @@ In [Node.js](https://nodejs.org/):
 const lc = require('letter-count');
 ```
 
-## API
+# API
 
-#### `lc.count(value, [option])`
+## `lc.count(value, [option])`
 
 ```javascript
 const Log = console.log;
@@ -37,43 +37,49 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 
 ### The optional `option` argument accepts a string with the following options:
 
+#### Counts only the characters:
 ##### `-c` or `--chars` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-c'); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
-#### `-ln` or `--lines` 
+#### Counts only the lines:
+##### `-ln` or `--lines` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-ln'); 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
-#### `-w` or `--words` 
+#### Counts only the characters:
+##### `-w` or `--words` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-w'); 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
-#### `-n` or `--numbers` 
+#### Counts only the numbers;
+##### `-n` or `--numbers` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-n'); 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
-#### `-l` or `--letters` 
+#### Counts only the letters;
+##### `-l` or `--letters` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-l'); 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
-#### `-ws` or `--wordsigns` 
+#### Counts only the words sings;
+##### `-ws` or `--wordsigns` 
 ```javascript
 lc.count("Hamburg - \nGermany 137!", '-ws'); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
-### `lc.countFromFile(file, [option])`
+## `lc.countFromFile(file, [option])`
 
 ```javascript
 const Log = console.log;
@@ -82,7 +88,7 @@ Log(lc.countFromFile('/path/to/file.txt'));
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23, lines: 2, words: 2, numbers: 3, letters: 14, wordsigns: 2, hash: 'd559d4e0ad0770ec6940e6892a9c921b' }
 ```
 
-The optional `option` argument accepts a string with the following options:
+### The optional `option` argument accepts a string with the following options:
 
 #### `-c` or `--chars` 
 ```javascript
@@ -120,7 +126,7 @@ lc.countFromFile('/path/to/file.txt', '--wordsigns');
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
-### `lc.info([option])`
+## `lc.info([option])`
 
 ```javascript
 const Log = console.log;
@@ -129,7 +135,7 @@ Log(lc.info());
 //=> letter-count.js
 ```
 
-The optional `option` argument accepts a string with the following options:
+### The optional `option` argument accepts a string with the following options:
 
 #### `-n` or `--name` 
 ```javascript
