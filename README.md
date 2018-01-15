@@ -5,12 +5,13 @@
 
 [![NPM Badge](https://nodei.co/npm/letter-count.png?downloads=true)](https://www.npmjs.com/package/letter-count)
 
+![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
+
 # de.schulte360.npm.letter-count
 > This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 
 > Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
 
-![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
 
 ## Installation
 
