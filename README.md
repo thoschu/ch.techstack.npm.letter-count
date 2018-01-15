@@ -14,7 +14,7 @@
 
 [![NPM Downloads](https://img.shields.io/npm/dt/de.schulte360.npm.letter-count.svg?maxAge=2592000)](https://www.npmjs.com/disinfect)<br>
 
-[![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/genediazjr/disinfect)
+[![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
 
 [![NSP Status](https://nodesecurity.io/orgs/genediazjr/projects/57a4e17d-bf27-4150-b763-3c92b244d2c5/badge)](https://nodesecurity.io/orgs/genediazjr/projects/57a4e17d-bf27-4150-b763-3c92b244d2c5)
 
