@@ -7,11 +7,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/thoschu/de.schulte360.npm.letter-count/badge.svg?branch=master)](https://coveralls.io/github/thoschu/de.schulte360.npm.letter-count?branch=master)
 [![Code Climate](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count/badges/gpa.svg)](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count)
 [![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
-
+[![GitHub issues](https://img.shields.io/github/issues/thoschu/de.schulte360.npm.letter-count.svg)](https://github.com/thoschu/de.schulte360.npm.letter-count/issues)
+[![GitHub license](https://img.shields.io/github/license/thoschu/de.schulte360.npm.letter-count.svg)](https://github.com/thoschu/de.schulte360.npm.letter-count/blob/master/LICENSE)
 
 [![NPM Badge](https://nodei.co/npm/letter-count.png?downloads=true)](https://www.npmjs.com/package/letter-count)
 
-> ![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
+![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
 > This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 >
 > Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
