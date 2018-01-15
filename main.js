@@ -6,6 +6,21 @@ const LC = require('./lib/app'),
 // console.log(LC.countFromFile('test/input.txt', '-a'));
  console.log(LC.info());
 
+var validator = require('validator');
+
+//var sqlDetec = validator.matches('<script>foo@bar.com</script>', /\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/ix); //=> true
+
+var test = validator.matches('<e>fooar.com', /((\%3C)|<)[^\n]+((\%3E)|>)/i); //=> true
+
+
+    //Either matches('foo', /foo/i) or matches('foo', 'foo', 'i').
+
+
+
+
+
+console.log(test);
+
 // var http = require('http');
 //
 // var Server = http.Server;
