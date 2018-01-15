@@ -12,7 +12,7 @@
 
 
 
-[![NPM Downloads](https://img.shields.io/npm/dt/de.schulte360.npm.letter-count.svg?maxAge=2592000)](https://www.npmjs.com/disinfect)<br>
+[![NPM Downloads](https://img.shields.io/npm/dt/de.schulte360.npm.letter-count.svg?maxAge=2592000)](https://www.npmjs.com/de.schulte360.npm.letter-count)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
 
