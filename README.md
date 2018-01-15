@@ -8,9 +8,12 @@
 ![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
 
 # de.schulte360.npm.letter-count
-> This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
+> This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 >
 > Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
+
+> The idea of this project arose during the development of a game, while my brother accompanied me for one day in the agency to register the incurrence of free improvised software. 
+> So, this is a project that also has been started because of my interests in modelling digital logic and data.
 
 
 ## Installation
@@ -162,7 +165,7 @@ Log(lc.info());
 //=>  { 
 //      name: 'letter-count',
 //      version: '0.0.1',
-//      description: 'This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
+//      description: 'This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
 //      author: { 
 //          name: 'Tom S.', 
 //          email: 'thoschulte@gmail.com' 
@@ -191,7 +194,7 @@ lc.info('--version');
 ##### `-d` or `--description` 
 ```javascript
 lc.info('--description'); 
-//=> e.g. This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
+//=> e.g. This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 ```
 
 #### Returns only the project author:
