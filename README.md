@@ -273,7 +273,7 @@ $ letter-count -f path/to/file/input.txt
 
 ## Doc
 
-[![jsdoc logo](https://i63.tinypic.com/330yah0.jpg "JSDoc")](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
+[![jsdoc logo](https://www.thomas-schulte.de/images/jsdoc.jpg "JSDoc")](http://188.68.54.193:8888/job/npm.letter-count/javadoc/)
 
 ***
 
