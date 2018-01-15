@@ -161,7 +161,7 @@ const Log = console.log;
 Log(lc.info()); 
 //=>  { 
 //      name: 'letter-count',
-//      version: 'x.x.x',
+//      version: '0.0.1',
 //      description: 'This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
 //      author: { 
 //          name: 'Tom S.', 
@@ -184,21 +184,22 @@ lc.info('--name');
 ##### `-v` or `--version` 
 ```javascript
 lc.info('--version'); 
-//=> x.x.x
+//=> 0.0.1
 ```
 
 #### Returns only the project description:
 ##### `-d` or `--description` 
 ```javascript
 lc.info('--description'); 
-//=> e.g. Hello world...
+//=> e.g. This is a calculator which counts the number of letters/characters/lines/words/numbers/wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 ```
 
 #### Returns only the project author:
 ##### `-a` or `--author` 
 ```javascript
 lc.info('--author'); 
-//=> { name: 'Tom S.', email: 'thoschulte@gmail.com' }
+//=> { 
+// name: 'Tom S.', email: 'thoschulte@gmail.com' }
 ```
 
 #### Returns only the project license:
