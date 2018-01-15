@@ -6,17 +6,10 @@
 [![Build Status](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count.svg?branch=master)](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count)
 [![Coverage Status](https://coveralls.io/repos/github/thoschu/de.schulte360.npm.letter-count/badge.svg?branch=master)](https://coveralls.io/github/thoschu/de.schulte360.npm.letter-count?branch=master)
 [![Code Climate](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count/badges/gpa.svg)](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count)
+[![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
 
 
 [![NPM Badge](https://nodei.co/npm/letter-count.png?downloads=true)](https://www.npmjs.com/package/letter-count)
-
-
-
-[![NPM Downloads](https://img.shields.io/npm/dt/de.schulte360.npm.letter-count.svg?maxAge=2592000)](https://www.npmjs.com/de.schulte360.npm.letter-count)
-
-[![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
-
-[![NSP Status](https://nodesecurity.io/orgs/genediazjr/projects/57a4e17d-bf27-4150-b763-3c92b244d2c5/badge)](https://nodesecurity.io/orgs/genediazjr/projects/57a4e17d-bf27-4150-b763-3c92b244d2c5)
 
 > ![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
 > This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
