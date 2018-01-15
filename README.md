@@ -16,12 +16,13 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/genediazjr/disinfect/badge.svg)](https://snyk.io/test/github/genediazjr/disinfect)
 [![NSP Status](https://nodesecurity.io/orgs/genediazjr/projects/57a4e17d-bf27-4150-b763-3c92b244d2c5/badge)](https://nodesecurity.io/orgs/genediazjr/projects/57a4e17d-bf27-4150-b763-3c92b244d2c5)
 
+> ![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
 > This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 >
 > Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
 
 > The idea of this project arose during the development of a [game](//spiele.rtl.de/rtlspiele/stadt-land-fluss-2-8131.html), while my brother accompanied me for one day in the agency to register the incurrence of free improvised software. 
-> So, this is a project that also has been started because of my interests in modelling digital logic and data. ![letter-count logo](https://www.thomas-schulte.de/images/letter-count.png "Logo letter-count")
+> So, this is a project that also has been started because of my interests in modelling digital logic and data.
 
 ## Installation
 
