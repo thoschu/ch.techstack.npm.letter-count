@@ -53,7 +53,7 @@ function copyTask5(done) {
 function zipTask(done) {
     setTimeout(function () {
         gulp.src('build/**/*')
-            .pipe(tar('letter-count.tgz'))
+            .pipe(tar('package.tgz'))
             //.pipe(gzip())
             .pipe(gulp.dest('build'));
     }, 3000);
