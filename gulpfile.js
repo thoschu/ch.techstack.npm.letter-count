@@ -75,6 +75,4 @@ gulp.task('do', gulp.series('clear', 'copy'));
 
 gulp.task('zip', zipTask);
 
-gulp.task('default', gulp.series('do', 'zip', function (done) {
-    done();
-}));
+gulp.task('default', gulp.series('do', 'zip'));
