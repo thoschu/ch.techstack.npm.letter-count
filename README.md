@@ -15,6 +15,7 @@
 
 Why letter-count?
 ----------
+
 <img src="https://www.thomas-schulte.de/images/letter-count.png" align="right" hspace="12" />
 > This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
 >
