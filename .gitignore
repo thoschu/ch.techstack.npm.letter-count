@@ -64,3 +64,5 @@ main.js
 coverage/**/*
 
 build
+
+out
