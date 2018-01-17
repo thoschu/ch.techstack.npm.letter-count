@@ -131,3 +131,9 @@ console.log(test);
 // console.log(lines);
 //
 //console.log(process.argv.pop());
+
+// var str = "ThIs Is A Test On HOW tO counT UppeR CaSE";
+//alert(str.replace(/[^A-Z]/g, "").length);
+
+// str = "ÜÇ tas has ho&#350;af gÖtürüldü kona&#286;&#305;n &#304;çine.";
+// alert(str.replace(/[^A-ZÜÖÇ&#350;i&#286;]/g, "").length);  // 6
