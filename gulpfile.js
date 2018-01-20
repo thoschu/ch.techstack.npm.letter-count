@@ -75,4 +75,8 @@ gulp.task('do', gulp.series('clear', 'copy'));
 
 gulp.task('zip', zipTask);
 
-gulp.task('default', gulp.series('do', 'zip'));
+gulp.task('default', gulp.series('do', 'zip'), (done) => {
+    console.log('gulp tasks done...');
+
+    done();
+});

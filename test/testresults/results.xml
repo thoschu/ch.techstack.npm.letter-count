@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="18" time="64">
- <testsuite name="letter-count.js tests" timestamp="2018-01-14T01:00:23" hostname="localhost" time="0.025" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+<testsuites disabled="0" errors="0" failures="0" tests="18" time="78">
+ <testsuite name="letter-count.js tests" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.031" errors="0" tests="0" skipped="0" disabled="0" failures="0">
  </testsuite>
- <testsuite name="letter-count.js tests.A. the count method" timestamp="2018-01-14T01:00:23" hostname="localhost" time="0.008" errors="0" tests="6" skipped="0" disabled="0" failures="0">
-  <testcase classname="letter-count.js tests.A. the count method" name="1. should be able to count the number of letters in the given string" time="0.002" />
-  <testcase classname="letter-count.js tests.A. the count method" name="2. should be able to count the number of lines in the given string" time="0.001" />
+ <testsuite name="letter-count.js tests.A. the count method" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.015" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+  <testcase classname="letter-count.js tests.A. the count method" name="1. should be able to count the number of letters in the given string" time="0" />
+  <testcase classname="letter-count.js tests.A. the count method" name="2. should be able to count the number of lines in the given string" time="0" />
   <testcase classname="letter-count.js tests.A. the count method" name="3. should be able to count the number of characters in the given string" time="0" />
   <testcase classname="letter-count.js tests.A. the count method" name="4. should be able to count the number of words in the given string" time="0" />
-  <testcase classname="letter-count.js tests.A. the count method" name="5. should be able to count the number of numbers in the given string" time="0" />
+  <testcase classname="letter-count.js tests.A. the count method" name="5. should be able to count the number of numbers in the given string" time="0.015" />
   <testcase classname="letter-count.js tests.A. the count method" name="6. should be able to count the number of wordsigns in the given string" time="0" />
  </testsuite>
- <testsuite name="letter-count.js tests.B. the countFromFile method" timestamp="2018-01-14T01:00:23" hostname="localhost" time="0.016" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ <testsuite name="letter-count.js tests.B. the countFromFile method" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.016" errors="0" tests="0" skipped="0" disabled="0" failures="0">
  </testsuite>
- <testsuite name="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" timestamp="2018-01-14T01:00:23" hostname="localhost" time="0.005" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+ <testsuite name="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.016" errors="0" tests="6" skipped="0" disabled="0" failures="0">
   <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="1. should be able to count the number of wordsigns in the given file" time="0" />
   <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="2. should be able to count the number of numbers in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="3. should be able to count the number of words in the given file" time="0.003" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="3. should be able to count the number of words in the given file" time="0.016" />
   <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="4. should be able to count the number of characters in the given file" time="0" />
   <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="5. should be able to count the number of lines in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="6. should be able to count the number of letters in the given file" time="0.001" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="6. should be able to count the number of letters in the given file" time="0" />
  </testsuite>
- <testsuite name="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" timestamp="2018-01-14T01:00:23" hostname="localhost" time="0.01" errors="0" tests="6" skipped="0" disabled="0" failures="0">
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="1. should be able to count the number of wordsigns in the given file" time="0.002" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="2. should be able to count the number of numbers in the given file" time="0.002" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="3. should be able to count the number of words in the given file" time="0.001" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="4. should be able to count the number of characters in the given file" time="0.002" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="5. should be able to count the number of lines in the given file" time="0.001" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="6. should be able to count the number of letters in the given file" time="0.002" />
+ <testsuite name="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="1. should be able to count the number of wordsigns in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="2. should be able to count the number of numbers in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="3. should be able to count the number of words in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="4. should be able to count the number of characters in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="5. should be able to count the number of lines in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="6. should be able to count the number of letters in the given file" time="0" />
  </testsuite>
 </testsuites>
