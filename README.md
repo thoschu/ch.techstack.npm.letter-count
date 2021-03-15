@@ -229,7 +229,7 @@ $ npm install -g letter-count
 #### After that you’re able to count from the command line:
 ```bash
 $ letter-count hamburg 
-#=> 1 Jan 23:59:59 - hamburg : {"chars": 7, "letters": 7, "lines": 1, "numbers": 0, "words": 1, "wordsigns": 0}
+#=> 1 Jan 23:59:59 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "options": "--all", "origin": "hamburg", "words": "1", "wordsigns": "0"}
 ```
 
 ##### To count only the character, use the the `-c`/`--char` option:
@@ -247,6 +247,12 @@ $ letter-count -ln tom s.
 ##### To count only the words, use the the `-w`/`--words` option:
 ```bash
 $ letter-count -w tom hamburg 
+#=> 1 Jan 12:00:00 - tom hamburg : {"words": 2, "origin": "tom hamburg"}
+```
+
+##### To count only the words, use the the `-w`/`--words` option:
+```bash
+$ letter-count -hs tom
 #=> 1 Jan 12:00:00 - tom hamburg : {"words": 2, "origin": "tom hamburg"}
 ```
 

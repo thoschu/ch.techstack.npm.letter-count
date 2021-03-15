@@ -2,56 +2,79 @@
 
 const Util = require('util'),
     Chalk = require('chalk'),
-    R = require('ramda'),
-    Lc = require('../lib/index.js'),
-    N = R.always(null);
+    R = require('ramda');
 
-(function (argumentsArr) {
+const Lc = require('../lib/index');
+
+const N = R.always(null);
+
+(argumentsArr => {
     let lengthArgumentsArr = R.length(argumentsArr),
         resultObject = N(),
         result = N();
 
     if (R.equals(lengthArgumentsArr, 2)) {
         let label = R.concat(Chalk.red.bold(undefined), ' : '),
-            zero = R.always(0);
+            zero = R.always(0)();
 
         resultObject = {
-            chars: zero(),
-            elements: zero(),
-            letters: zero(),
-            lines: zero(),
-            words: zero(),
-            wordsigns: zero()
+            chars: zero,
+            hash: zero,
+            letters: zero,
+            lines: zero,
+            numbers: zero,
+            options: undefined,
+            origin: undefined,
+            words: zero,
+            wordsigns: zero
         };
 
         result = R.concat(label, R.toString(resultObject));
     } else {
         let cleanedArgumentsArr = R.drop(2, argumentsArr),
-            optionsArr = R.nth(0, cleanedArgumentsArr),
-            lastElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr);
+            firstElementOfArgumentsArr = R.nth(0, cleanedArgumentsArr),
+            optionsElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr);
 
-        if (R.equals(optionsArr, lastElementOfArgumentsArr)) {
-            let label = R.concat(Chalk.blue.bold(lastElementOfArgumentsArr), ' : '),
-                countResultObject = Lc.count(lastElementOfArgumentsArr),
+        console.log(cleanedArgumentsArr);
+        console.log(firstElementOfArgumentsArr);
+        console.log(optionsElementOfArgumentsArr);
+        console.log(R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr))
+        console.log('-------------------------------')
+
+        if (R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr)) {
+            let label = R.concat(Chalk.blue.bold(firstElementOfArgumentsArr), ' : '),
+                countResultObject = Lc.count(firstElementOfArgumentsArr),
                 chars = Chalk.green(countResultObject.chars),
+                hash = Chalk.green(countResultObject.hash),
                 letters = Chalk.green(countResultObject.letters),
                 lines = Chalk.green(countResultObject.lines),
+                numbers = Chalk.green(countResultObject.numbers),
+                options = Chalk.green('--all'),
+                origin = Chalk.green(firstElementOfArgumentsArr),
                 words = Chalk.green(countResultObject.words),
                 wordsigns = Chalk.green(countResultObject.wordsigns);
 
             resultObject = {
-                chars: chars,
-                letters: letters,
-                lines: lines,
-                words: words,
-                wordsigns: wordsigns
+                chars,
+                hash,
+                letters,
+                lines,
+                numbers,
+                options,
+                origin,
+                words,
+                wordsigns
             };
 
             result = R.concat(label, R.toString(resultObject));
         } else {
-            let option = R.nth(0, cleanedArgumentsArr),
-                inputArr = R.drop(1, cleanedArgumentsArr),
+            let option = cleanedArgumentsArr.shift(-1, 1),
+                inputArr = R.clone(cleanedArgumentsArr),
                 resultString = '';
+
+            console.log(inputArr);
+            console.log(option);
+            console.log('+++++++++++++++++++++++++++++++++++++')
 
             switch (option) {
                 case '-a':
@@ -86,10 +109,16 @@ const Util = require('util'),
                 case '--file':
                     option = '-f';
                     break;
+                case '-hs':
+                case '--hash':
+                    option = '-hs';
+                    break;
                 default:
-                    inputArr = R.prepend(option, inputArr);
                     option = '-a';
             }
+
+            console.log(option);
+            console.log(inputArr);
 
             let lastElementOfInputArr = R.last(inputArr),
                 whiteSpace = ' ';
@@ -106,16 +135,19 @@ const Util = require('util'),
                 resultString = R.concat(resultString, tempStr);
             }, inputArr);
 
+            console.log(resultString);
 
             let chalkedResultString = Chalk.blue.bold(resultString),
                 label = R.concat(chalkedResultString, ' : '),
                 resultObject = N();
 
             if(R.equals(option, '-f')) {
-                resultObject = Lc.countFromFile(resultString, option);
+                resultObject = Lc.countFromFile(option, resultString);
             } else {
-                resultObject = Lc.count(resultString, option);
+                resultObject = Lc.count(option, resultString);
             }
+
+            console.log(resultObject)
 
             result = R.concat(label, R.toString(resultObject));
         }
