@@ -38,7 +38,7 @@ const lc = require('letter-count');
 
 ## API
 
-## `lc.count(value, [option])`
+## `lc.count([option], value)`
 
 ```javascript
 const Log = console.log;
@@ -61,46 +61,46 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 #### Counts only the characters:
 ##### `-c` or `--chars` 
 ```javascript
-lc.count("Hamburg - \nGermany 137!", '-c'); 
+lc.count('-c', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
 #### Counts only the lines:
 ##### `-ln` or `--lines` 
 ```javascript
-lc.count("Hamburg - \nGermany 137!", '-ln'); 
+lc.count('-ln', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
 #### Counts only the characters:
 ##### `-w` or `--words` 
 ```javascript
-lc.count("Hamburg - \nGermany 137!", '-w'); 
+lc.count('-w', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
 #### Counts only the numbers:
 ##### `-n` or `--numbers` 
 ```javascript
-lc.count("Hamburg - \nGermany 137!", '-n'); 
+lc.count('-n', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
 #### Counts only the letters:
 ##### `-l` or `--letters` 
 ```javascript
-lc.count("Hamburg - \nGermany 137!", '-l'); 
+lc.count('-l', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
 #### Counts only the words sings:
 ##### `-ws` or `--wordsigns` 
 ```javascript
-lc.count("Hamburg - \nGermany 137!", '-ws'); 
+lc.count('-ws', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
-## `lc.countFromFile(file, [option])`
+## `lc.countFromFile([option], file)`
 
 ```javascript
 const Log = console.log;
@@ -123,42 +123,42 @@ Log(lc.countFromFile('/path/to/file.txt'));
 #### Counts only the characters:
 ##### `-c` or `--chars` 
 ```javascript
-lc.countFromFile('/path/to/file.txt', '--chars'); 
+lc.countFromFile('--chars', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
 #### Counts only the lines:
 ##### `-ln` or `--lines` 
 ```javascript
-lc.countFromFile('/path/to/file.txt', '--lines'); 
+lc.countFromFile('--lines', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
 #### Counts only the words:
 ##### `-w` or `--words` 
 ```javascript
-lc.countFromFile('/path/to/file.txt', '--words'); 
+lc.countFromFile('--words', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
 #### Counts only the numbers:
 ##### `-n` or `--numbers` 
 ```javascript
-lc.countFromFile('/path/to/file.txt', '--numbers'); 
+lc.countFromFile('--numbers', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
 #### Counts only the letters:
 ##### `-l` or `--letters` 
 ```javascript
-lc.countFromFile('/path/to/file.txt', '--letters'); 
+lc.countFromFile('--letters', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
 #### Counts only the word signs:
 ##### `-ws` or `--wordsigns` 
 ```javascript
-lc.countFromFile('/path/to/file.txt', '--wordsigns'); 
+lc.countFromFile('--wordsigns', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 

@@ -1,14 +1,16 @@
 {
   "name": "letter-count",
-  "version": "2.8.10",
+  "version": "2.9.0",
   "description": "This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
-  "main": "lib/app.js",
-  "bin": "bin/letter-count.js",
-  "private": false,
+  "main": "lib/index.js",
+  "bin": {
+    "letter-count" : "bin/letter-count.js"
+  },
+  "private": true,
   "scripts": {
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
-    "doc": "jsdoc ./lib/app.js",
+    "doc": "jsdoc ./lib/index.js",
     "build": "concurrently gulp \"npm run code\" \"npm run doc\""
   },
   "repository": {

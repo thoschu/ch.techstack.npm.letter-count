@@ -3,7 +3,7 @@
 const Util = require('util'),
     Chalk = require('chalk'),
     R = require('ramda'),
-    Lc = require('../lib/app.js'),
+    Lc = require('../lib/index.js'),
     N = R.always(null);
 
 (function (argumentsArr) {
