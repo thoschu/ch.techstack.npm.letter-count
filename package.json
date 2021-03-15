@@ -1,6 +1,6 @@
 {
   "name": "letter-count",
-  "version": "2.8.9",
+  "version": "2.8.10",
   "description": "This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
   "main": "lib/app.js",
   "bin": "bin/letter-count.js",
@@ -57,9 +57,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "md5": "^2.2.1",
-    "ramda": "^0.25.0",
-    "validator": "^9.2.0",
-    "xss": "^0.3.7"
+    "ramda": "^0.25.0"
   },
   "engines": {
     "node": ">=6"
