@@ -13,7 +13,7 @@ function copyTask1(done) {
     gulp.src([
         'README.md',
         'package.json',
-        'npm-shrinkwrap.json',
+        'package-lock.json',
         'LICENSE',
     ]).pipe(gulp.dest('build'));
 
@@ -22,7 +22,6 @@ function copyTask1(done) {
 
 function copyTask2(done) {
     gulp.src([
-        'bin/letter-count',
         'bin/letter-count.js'
     ]).pipe(gulp.dest('./build/bin'));
 
@@ -30,7 +29,10 @@ function copyTask2(done) {
 };
 
 function copyTask3(done) {
-    gulp.src('lib/app.js').pipe(gulp.dest('build/lib'));
+    gulp.src([
+        'lib/index.js',
+        'lib/tasks.js',
+    ]).pipe(gulp.dest('build/lib'));
 
     done();
 };

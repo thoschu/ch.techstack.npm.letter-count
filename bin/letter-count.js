@@ -3,123 +3,146 @@
 const Util = require('util'),
     Chalk = require('chalk'),
     R = require('ramda'),
-    Lc = require('../lib/app.js'),
-    N = R.always(null);
+    Emoji = require('node-emoji'),
+    Lc = require('../lib/index');
 
-(function (argumentsArr) {
-    let lengthArgumentsArr = R.length(argumentsArr),
-        resultObject = N(),
-        result = N();
+const N = R.always(null);
+const U = R.always(undefined);
 
-    if (R.equals(lengthArgumentsArr, 2)) {
-        let label = R.concat(Chalk.red.bold(undefined), ' : '),
-            zero = R.always(0);
+(argumentsArr => {
+    try {
+        let lengthArgumentsArr = R.length(argumentsArr),
+            resultObject = N(),
+            result = N();
 
-        resultObject = {
-            chars: zero(),
-            elements: zero(),
-            letters: zero(),
-            lines: zero(),
-            words: zero(),
-            wordsigns: zero()
-        };
-
-        result = R.concat(label, R.toString(resultObject));
-    } else {
-        let cleanedArgumentsArr = R.drop(2, argumentsArr),
-            optionsArr = R.nth(0, cleanedArgumentsArr),
-            lastElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr);
-
-        if (R.equals(optionsArr, lastElementOfArgumentsArr)) {
-            let label = R.concat(Chalk.blue.bold(lastElementOfArgumentsArr), ' : '),
-                countResultObject = Lc.count(lastElementOfArgumentsArr),
-                chars = Chalk.green(countResultObject.chars),
-                letters = Chalk.green(countResultObject.letters),
-                lines = Chalk.green(countResultObject.lines),
-                words = Chalk.green(countResultObject.words),
-                wordsigns = Chalk.green(countResultObject.wordsigns);
+        if (R.equals(lengthArgumentsArr, 2)) {
+            let label = R.concat(Chalk.red.bold(U()), ' : '),
+                zero = R.always(0)();
 
             resultObject = {
-                chars: chars,
-                letters: letters,
-                lines: lines,
-                words: words,
-                wordsigns: wordsigns
+                chars: zero,
+                hash: zero,
+                letters: zero,
+                lines: zero,
+                numbers: zero,
+                option: U(),
+                origin: U(),
+                words: zero,
+                wordsigns: zero,
+                emoji: Emoji.random().emoji
             };
 
             result = R.concat(label, R.toString(resultObject));
         } else {
-            let option = R.nth(0, cleanedArgumentsArr),
-                inputArr = R.drop(1, cleanedArgumentsArr),
-                resultString = '';
+            let cleanedArgumentsArr = R.drop(2, argumentsArr),
+                firstElementOfArgumentsArr = R.nth(0, cleanedArgumentsArr),
+                optionsElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr);
 
-            switch (option) {
-                case '-a':
-                case '--all':
-                    option = '-a';
-                    break;
-                case '-c':
-                case '--chars':
-                    option = '-c';
-                    break;
-                case '-ln':
-                case '--lines':
-                    option = '-ln';
-                    break;
-                case '-w':
-                case '--words':
-                    option = '-w';
-                    break;
-                case '-n':
-                case '--numbers':
-                    option = '-n';
-                    break;
-                case '-l':
-                case '--letters':
-                    option = '-l';
-                    break;
-                case '-ws':
-                case '--wordsigns':
-                    option = '-ws';
-                    break;
-                case '-f':
-                case '--file':
-                    option = '-f';
-                    break;
-                default:
-                    inputArr = R.prepend(option, inputArr);
-                    option = '-a';
-            }
+            if (R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr)) {
+                let label = R.concat(Chalk.blue.bold(firstElementOfArgumentsArr), ' : '),
+                    countResultObject = Lc.count(firstElementOfArgumentsArr),
+                    chars = Chalk.green(countResultObject.chars),
+                    hash = Chalk.green(countResultObject.hash),
+                    letters = Chalk.green(countResultObject.letters),
+                    lines = Chalk.green(countResultObject.lines),
+                    numbers = Chalk.green(countResultObject.numbers),
+                    option = Chalk.green('-a'),
+                    origin = Chalk.green(firstElementOfArgumentsArr),
+                    words = Chalk.green(countResultObject.words),
+                    wordsigns = Chalk.green(countResultObject.wordsigns),
+                    emoji = Emoji.random().emoji;
 
-            let lastElementOfInputArr = R.last(inputArr),
-                whiteSpace = ' ';
+                resultObject = {
+                    chars,
+                    hash,
+                    letters,
+                    lines,
+                    numbers,
+                    option,
+                    origin,
+                    words,
+                    wordsigns,
+                    emoji
+                };
 
-            R.forEach(x => {
-                let tempStr = N();
+                result = R.concat(label, R.toString(resultObject));
+            } else {
+                let option = cleanedArgumentsArr.shift(-1, 1),
+                    inputArr = R.clone(cleanedArgumentsArr),
+                    resultString = '';
 
-                if (R.equals(x, lastElementOfInputArr)) {
-                    tempStr = x;
-                } else {
-                    tempStr = R.concat(x, whiteSpace);
+                switch (option) {
+                    case '-a':
+                    case '--all':
+                        option = '-a';
+                        break;
+                    case '-c':
+                    case '--chars':
+                        option = '-c';
+                        break;
+                    case '-ln':
+                    case '--lines':
+                        option = '-ln';
+                        break;
+                    case '-w':
+                    case '--words':
+                        option = '-w';
+                        break;
+                    case '-n':
+                    case '--numbers':
+                        option = '-n';
+                        break;
+                    case '-l':
+                    case '--letters':
+                        option = '-l';
+                        break;
+                    case '-ws':
+                    case '--wordsigns':
+                        option = '-ws';
+                        break;
+                    case '-f':
+                    case '--file':
+                        option = '-f';
+                        break;
+                    case '-hs':
+                    case '--hash':
+                        option = '-hs';
+                        break;
+                    default:
+                        option = '-a';
                 }
 
-                resultString = R.concat(resultString, tempStr);
-            }, inputArr);
+                let lastElementOfInputArr = R.last(inputArr),
+                    whiteSpace = ' ';
 
+                R.forEach(x => {
+                    let tempStr = N();
 
-            let chalkedResultString = Chalk.blue.bold(resultString),
-                label = R.concat(chalkedResultString, ' : '),
-                resultObject = N();
+                    if (R.equals(x, lastElementOfInputArr)) {
+                        tempStr = x;
+                    } else {
+                        tempStr = R.concat(x, whiteSpace);
+                    }
 
-            if(R.equals(option, '-f')) {
-                resultObject = Lc.countFromFile(resultString, option);
-            } else {
-                resultObject = Lc.count(resultString, option);
+                    resultString = R.concat(resultString, tempStr);
+                }, inputArr);
+
+                let chalkedResultString = Chalk.blue.bold(resultString),
+                    label = R.concat(chalkedResultString, ' : '),
+                    resultObject = N();
+
+                if(R.equals(option, '-f')) {
+                    resultObject = Lc.countFromFile(option, resultString);
+                } else {
+                    resultObject = Lc.count(option, resultString);
+                }
+
+                result = R.concat(label, R.toString(R.map(x => Chalk.green(x), resultObject)));
             }
-
-            result = R.concat(label, R.toString(resultObject));
         }
-    }
 
-    Util.log(result);
+        Util.log(result);
+    } catch(err) {
+        process.stdout.write(err);
+    }
 })(R.prop('argv', process));
