@@ -12,7 +12,7 @@
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
     "doc": "jsdoc ./lib/index.js",
-    "build": "concurrently gulp \"npm run code\" \"npm run doc\"",
+    "build": "concurrently gulp \"npm run code\" \"npm run doc\""
   },
   "repository": {
     "type": "git",
