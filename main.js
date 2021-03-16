@@ -1,23 +1,27 @@
-const LC = require('./lib/app'),
+const LC = require('./lib/index'),
     R = require('ramda');
 
 const http = require('http');
+const url = require('url');
 
 http.createServer((req, res) => {
     let body = '';
 
-    req.on('readable',(data) => {
-        body += req.read();
+    req.on('readable',() => {
+        // const queryObject = url.parse(req.url, true).query;
+        // console.log(queryObject);
     });
 
+
+
     req.on('end', () => {
-        console.log(req.headers);
+        console.log(req.url);
 
         res.writeHead(200, {
-            'content-type': 'text/plain'
+            'content-type': 'application/json'
         });
 
-        res.end(body);
+        res.end(JSON.stringify(LC.count(req.headers.host)));
     });
 
     req.on('close', () => {
