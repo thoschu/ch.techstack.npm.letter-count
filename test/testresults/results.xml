@@ -1,31 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="18" time="78">
- <testsuite name="letter-count.js tests" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.031" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+<testsuites disabled="0" errors="0" failures="6" tests="18" time="0.117">
+ <testsuite name="letter-count.js tests" timestamp="2021-03-16T17:25:56" hostname="localhost" time="0.049" errors="0" tests="0" skipped="0" disabled="0" failures="0">
  </testsuite>
- <testsuite name="letter-count.js tests.A. the count method" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.015" errors="0" tests="6" skipped="0" disabled="0" failures="0">
-  <testcase classname="letter-count.js tests.A. the count method" name="1. should be able to count the number of letters in the given string" time="0" />
-  <testcase classname="letter-count.js tests.A. the count method" name="2. should be able to count the number of lines in the given string" time="0" />
-  <testcase classname="letter-count.js tests.A. the count method" name="3. should be able to count the number of characters in the given string" time="0" />
-  <testcase classname="letter-count.js tests.A. the count method" name="4. should be able to count the number of words in the given string" time="0" />
-  <testcase classname="letter-count.js tests.A. the count method" name="5. should be able to count the number of numbers in the given string" time="0.015" />
+ <testsuite name="letter-count.js tests.A. the count method" timestamp="2021-03-16T17:25:56" hostname="localhost" time="0.024" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+  <testcase classname="letter-count.js tests.A. the count method" name="1. should be able to count the number of letters in the given string" time="0.003" />
+  <testcase classname="letter-count.js tests.A. the count method" name="2. should be able to count the number of lines in the given string" time="0.001" />
+  <testcase classname="letter-count.js tests.A. the count method" name="3. should be able to count the number of characters in the given string" time="0.003" />
+  <testcase classname="letter-count.js tests.A. the count method" name="4. should be able to count the number of words in the given string" time="0.001" />
+  <testcase classname="letter-count.js tests.A. the count method" name="5. should be able to count the number of numbers in the given string" time="0" />
   <testcase classname="letter-count.js tests.A. the count method" name="6. should be able to count the number of wordsigns in the given string" time="0" />
  </testsuite>
- <testsuite name="letter-count.js tests.B. the countFromFile method" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.016" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ <testsuite name="letter-count.js tests.B. the countFromFile method" timestamp="2021-03-16T17:25:56" hostname="localhost" time="0.022" errors="0" tests="0" skipped="0" disabled="0" failures="0">
  </testsuite>
- <testsuite name="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0.016" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+ <testsuite name="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" timestamp="2021-03-16T17:25:56" hostname="localhost" time="0.01" errors="0" tests="6" skipped="0" disabled="0" failures="0">
   <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="1. should be able to count the number of wordsigns in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="2. should be able to count the number of numbers in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="3. should be able to count the number of words in the given file" time="0.016" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="4. should be able to count the number of characters in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="5. should be able to count the number of lines in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="6. should be able to count the number of letters in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="2. should be able to count the number of numbers in the given file" time="0.001" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="3. should be able to count the number of words in the given file" time="0" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="4. should be able to count the number of characters in the given file" time="0.001" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="5. should be able to count the number of lines in the given file" time="0.001" />
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.A. the countFromFile method without options" name="6. should be able to count the number of letters in the given file" time="0.001" />
  </testsuite>
- <testsuite name="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" timestamp="2018-01-17T20:50:46" hostname="localhost" time="0" errors="0" tests="6" skipped="0" disabled="0" failures="0">
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="1. should be able to count the number of wordsigns in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="2. should be able to count the number of numbers in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="3. should be able to count the number of words in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="4. should be able to count the number of characters in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="5. should be able to count the number of lines in the given file" time="0" />
-  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="6. should be able to count the number of letters in the given file" time="0" />
+ <testsuite name="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" timestamp="2021-03-16T17:25:56" hostname="localhost" time="0.012" errors="0" tests="6" skipped="0" disabled="0" failures="6">
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="1. should be able to count the number of wordsigns in the given file" time="0.003">
+   <failure type="toEqual" message="Expected 2 to equal undefined."><![CDATA[Error: Expected 2 to equal undefined.
+    at <Jasmine>
+    at UserContext.<anonymous> (/Users/tschulte/OneDrive/Job/PlusServer GmbH/Projects/ch.techstack.npm.letter-count/spec/jasmine_tests/CountSpec.js:116:27)
+    at <Jasmine>]]>
+   </failure>
+  </testcase>
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="2. should be able to count the number of numbers in the given file" time="0.001">
+   <failure type="toEqual" message="Expected 3 to equal undefined."><![CDATA[Error: Expected 3 to equal undefined.
+    at <Jasmine>
+    at UserContext.<anonymous> (/Users/tschulte/OneDrive/Job/PlusServer GmbH/Projects/ch.techstack.npm.letter-count/spec/jasmine_tests/CountSpec.js:123:27)
+    at <Jasmine>]]>
+   </failure>
+  </testcase>
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="3. should be able to count the number of words in the given file" time="0.001">
+   <failure type="toEqual" message="Expected 2 to equal undefined."><![CDATA[Error: Expected 2 to equal undefined.
+    at <Jasmine>
+    at UserContext.<anonymous> (/Users/tschulte/OneDrive/Job/PlusServer GmbH/Projects/ch.techstack.npm.letter-count/spec/jasmine_tests/CountSpec.js:130:27)
+    at <Jasmine>]]>
+   </failure>
+  </testcase>
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="4. should be able to count the number of characters in the given file" time="0.001">
+   <failure type="toEqual" message="Expected 22 to equal undefined."><![CDATA[Error: Expected 22 to equal undefined.
+    at <Jasmine>
+    at UserContext.<anonymous> (/Users/tschulte/OneDrive/Job/PlusServer GmbH/Projects/ch.techstack.npm.letter-count/spec/jasmine_tests/CountSpec.js:137:28)
+    at <Jasmine>]]>
+   </failure>
+  </testcase>
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="5. should be able to count the number of lines in the given file" time="0.001">
+   <failure type="toEqual" message="Expected 1 to equal undefined."><![CDATA[Error: Expected 1 to equal undefined.
+    at <Jasmine>
+    at UserContext.<anonymous> (/Users/tschulte/OneDrive/Job/PlusServer GmbH/Projects/ch.techstack.npm.letter-count/spec/jasmine_tests/CountSpec.js:144:27)
+    at <Jasmine>]]>
+   </failure>
+  </testcase>
+  <testcase classname="letter-count.js tests.B. the countFromFile method.b.B. the countFromFile method with options" name="6. should be able to count the number of letters in the given file" time="0.001">
+   <failure type="toEqual" message="Expected 14 to equal undefined."><![CDATA[Error: Expected 14 to equal undefined.
+    at <Jasmine>
+    at UserContext.<anonymous> (/Users/tschulte/OneDrive/Job/PlusServer GmbH/Projects/ch.techstack.npm.letter-count/spec/jasmine_tests/CountSpec.js:151:28)
+    at <Jasmine>]]>
+   </failure>
+  </testcase>
  </testsuite>
 </testsuites>
