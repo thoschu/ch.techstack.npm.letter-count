@@ -132,6 +132,8 @@ const U = R.always(undefined);
                 resultObject = Lc.count(option, resultString);
             }
 
+            console.log(resultObject);
+
             resultObject = {
                 chars: Chalk.green(resultObject.chars),
                 hash: Chalk.green(resultObject.hash),

@@ -120,6 +120,7 @@ Log(lc.countFromFile('/path/to/file.txt'));
 //      lines: 2, 
 //      words: 2, 
 //      numbers: 3, 
+//      option: '-a',
 //      letters: 14,
 //      wordsigns: 2, 
 //      hash: 'd559d4e0ad0770ec6940e6892a9c921b' 
@@ -287,6 +288,12 @@ $ letter-count -l tom 13 hh
 ```bash
 $ letter-count -ws germany!
 #=> 1 Jan 12:00:00 - germany! : {"wordsigns": 1, "origin": "germany!"}
+```
+
+##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
+```bash
+$ letter-count -hs hamburg
+#=> 1 Jan 12:00:00 - germany! : {"hash": 1, "origin": "germany!"}
 ```
 
 ##### To count in a file, use the the `-f`/`--file` option and the path to the file:
