@@ -29,7 +29,10 @@ function copyTask2(done) {
 };
 
 function copyTask3(done) {
-    gulp.src('lib/index.js').pipe(gulp.dest('build/lib'));
+    gulp.src([
+        'lib/index.js',
+        'lib/tasks.js',
+    ]).pipe(gulp.dest('build/lib'));
 
     done();
 };
