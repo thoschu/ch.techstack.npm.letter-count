@@ -6,7 +6,7 @@
   "bin": {
     "letter-count": "bin/letter-count.js"
   },
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "node main.js",
     "test": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
@@ -64,6 +64,6 @@
     "ramda": "^0.27.1"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=7"
   }
 }
