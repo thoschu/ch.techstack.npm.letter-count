@@ -2,11 +2,11 @@
 
 const Util = require('util'),
     Chalk = require('chalk'),
-    R = require('ramda');
-
-const Lc = require('../lib/index');
+    R = require('ramda'),
+    Lc = require('../lib/index');
 
 const N = R.always(null);
+const U = R.always(undefined);
 
 (argumentsArr => {
     let lengthArgumentsArr = R.length(argumentsArr),
@@ -14,7 +14,7 @@ const N = R.always(null);
         result = N();
 
     if (R.equals(lengthArgumentsArr, 2)) {
-        let label = R.concat(Chalk.red.bold(undefined), ' : '),
+        let label = R.concat(Chalk.red.bold(U()), ' : '),
             zero = R.always(0)();
 
         resultObject = {
@@ -23,8 +23,8 @@ const N = R.always(null);
             letters: zero,
             lines: zero,
             numbers: zero,
-            options: undefined,
-            origin: undefined,
+            option: U(),
+            origin: U(),
             words: zero,
             wordsigns: zero
         };
@@ -35,12 +35,6 @@ const N = R.always(null);
             firstElementOfArgumentsArr = R.nth(0, cleanedArgumentsArr),
             optionsElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr);
 
-        console.log(cleanedArgumentsArr);
-        console.log(firstElementOfArgumentsArr);
-        console.log(optionsElementOfArgumentsArr);
-        console.log(R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr))
-        console.log('-------------------------------')
-
         if (R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr)) {
             let label = R.concat(Chalk.blue.bold(firstElementOfArgumentsArr), ' : '),
                 countResultObject = Lc.count(firstElementOfArgumentsArr),
@@ -49,7 +43,7 @@ const N = R.always(null);
                 letters = Chalk.green(countResultObject.letters),
                 lines = Chalk.green(countResultObject.lines),
                 numbers = Chalk.green(countResultObject.numbers),
-                options = Chalk.green('--all'),
+                option = Chalk.green('-a'),
                 origin = Chalk.green(firstElementOfArgumentsArr),
                 words = Chalk.green(countResultObject.words),
                 wordsigns = Chalk.green(countResultObject.wordsigns);
@@ -60,7 +54,7 @@ const N = R.always(null);
                 letters,
                 lines,
                 numbers,
-                options,
+                option,
                 origin,
                 words,
                 wordsigns
@@ -71,10 +65,6 @@ const N = R.always(null);
             let option = cleanedArgumentsArr.shift(-1, 1),
                 inputArr = R.clone(cleanedArgumentsArr),
                 resultString = '';
-
-            console.log(inputArr);
-            console.log(option);
-            console.log('+++++++++++++++++++++++++++++++++++++')
 
             switch (option) {
                 case '-a':
@@ -117,9 +107,6 @@ const N = R.always(null);
                     option = '-a';
             }
 
-            console.log(option);
-            console.log(inputArr);
-
             let lastElementOfInputArr = R.last(inputArr),
                 whiteSpace = ' ';
 
@@ -135,8 +122,6 @@ const N = R.always(null);
                 resultString = R.concat(resultString, tempStr);
             }, inputArr);
 
-            console.log(resultString);
-
             let chalkedResultString = Chalk.blue.bold(resultString),
                 label = R.concat(chalkedResultString, ' : '),
                 resultObject = N();
@@ -147,7 +132,17 @@ const N = R.always(null);
                 resultObject = Lc.count(option, resultString);
             }
 
-            console.log(resultObject)
+            resultObject = {
+                chars: Chalk.green(resultObject.chars),
+                hash: Chalk.green(resultObject.hash),
+                letters: Chalk.green(resultObject.letters),
+                lines: Chalk.green(resultObject.lines),
+                numbers: Chalk.green(resultObject.numbers),
+                option: Chalk.green(option),
+                origin: Chalk.green(resultObject.origin),
+                words: Chalk.green(resultObject.words),
+                wordsigns: Chalk.green(resultObject.wordsigns)
+            };
 
             result = R.concat(label, R.toString(resultObject));
         }

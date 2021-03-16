@@ -93,8 +93,15 @@ lc.count('-l', "Hamburg - \nGermany 137!");
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
+#### MD5 hash:
+##### `-hs` or `--hash` 
+```javascript
+lc.count('-hs', "Hamburg - \nGermany 137!"); 
+//=> { origin: 'Hamburg - \nGermany 137!', hash: '6bee63bbc6c56f61fbfd19f1429ad4a3' }
+```
+
 #### Counts only the words sings:
-##### `-ws` or `--wordsigns` 
+##### `-ws` or `--wordsigns`
 ```javascript
 lc.count('-ws', "Hamburg - \nGermany 137!"); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
@@ -160,6 +167,13 @@ lc.countFromFile('--letters', '/path/to/file.txt');
 ```javascript
 lc.countFromFile('--wordsigns', '/path/to/file.txt'); 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
+```
+
+#### MD5 hash:
+##### `-hs` or `--hash`
+```javascript
+lc.countFromFile('--hash', '/path/to/file.txt'); 
+//=> { origin: 'Hamburg - \nGermany 137!', hash: '6bee63bbc6c56f61fbfd19f1429ad4a3' }
 ```
 
 ## `lc.info([option])`
@@ -229,7 +243,7 @@ $ npm install -g letter-count
 #### After that you’re able to count from the command line:
 ```bash
 $ letter-count hamburg 
-#=> 1 Jan 23:59:59 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "options": "--all", "origin": "hamburg", "words": "1", "wordsigns": "0"}
+#=> 1 Jan 23:59:59 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "options": "-a", "origin": "hamburg", "words": "1", "wordsigns": "0"}
 ```
 
 ##### To count only the character, use the the `-c`/`--char` option:
