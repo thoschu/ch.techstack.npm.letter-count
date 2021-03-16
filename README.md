@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
 [![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
 [![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
-[![Build Status](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count.svg?branch=master)](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count)
+[![Build Status](https://travis-ci.org/thoschu/de.schulte360.npm.letter-count.svg?branch=master)](https://travis-ci.org/github/thoschu/ch.techstack.npm.letter-count)
 [![Coverage Status](https://coveralls.io/repos/github/thoschu/de.schulte360.npm.letter-count/badge.svg?branch=master)](https://coveralls.io/github/thoschu/de.schulte360.npm.letter-count?branch=master)
 [![Code Climate](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count/badges/gpa.svg)](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count)
 [![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
