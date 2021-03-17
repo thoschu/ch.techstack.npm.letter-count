@@ -1,7 +1,5 @@
 # letter-count
 
-[ShieldsIO:](https://shields.io)
-
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
 [![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
 [![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
@@ -321,6 +319,14 @@ $ letter-count -f path/to/file/input.txt
 ## RinKit
 
 [https://npm.runkit.com/letter-count](https://npm.runkit.com/letter-count)
+
+***
+
+## Links
+
+[ShieldsIO](https://shields.io)
+
+[RTL - Spiele](https://spiele.rtl.de/)
 
 ***
 
