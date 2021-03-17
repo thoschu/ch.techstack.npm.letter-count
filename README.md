@@ -325,7 +325,9 @@ $ letter-count -f path/to/file/input.txt
 ## Links
 
 [Author](https://thomas-schulte.de)
+
 [RTL - Games](https://spiele.rtl.de/)
+
 [ShieldsIO](https://shields.io)
 
 ***
