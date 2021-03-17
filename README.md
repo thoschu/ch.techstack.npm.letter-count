@@ -330,6 +330,8 @@ $ letter-count -f path/to/file/input.txt
 
 ***
 
-> ## License
->> ***This library is available under the [MIT](https://mths.be/mit) license.***
+## License
+
+***This library is available under the [MIT](https://mths.be/mit) license.***
+
 ---
