@@ -1,7 +1,5 @@
 # letter-count
 
-[ShieldsIO:](https://shields.io)
-
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
 [![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
 [![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
@@ -21,7 +19,7 @@ This is a calculator which counts the number of letters/ characters/ lines/ word
 
 Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or business officials, the number of actual characters matters. What you say may not be as important as how you say it. And how many characters you use.
 
-> The idea of this project arose during the development of a [game](//spiele.rtl.de/rtlspiele/stadt-land-fluss-2-8131.html), while my brother accompanied me for one day in the agency to register the incurrence of free improvised software. 
+> The idea of this project arose during the development of a [game](//spiele.rtl.de/rtlspiele/stadt-land-fluss-2-8131.html) | [OpenAPI](http://ec2-52-28-208-185.eu-central-1.compute.amazonaws.com/swagger/), while my brother accompanied me for one day in the agency to register the incurrence of free improvised software. 
 > So, this is a project that also has been started because of my interests in modelling digital logic and data.
 
 ## Installation
@@ -324,6 +322,18 @@ $ letter-count -f path/to/file/input.txt
 
 ***
 
-> ## License
->> ***This library is available under the [MIT](https://mths.be/mit) license.***
+## Links
+
+[Author](https://thomas-schulte.de)
+
+[RTL - Games](https://spiele.rtl.de/)
+
+[ShieldsIO](https://shields.io)
+
+***
+
+## License
+
+***This library is available under the [MIT](https://mths.be/mit) license.***
+
 ---
