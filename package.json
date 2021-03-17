@@ -6,7 +6,7 @@
   "bin": "bin/letter-count.js",
   "private": false,
   "scripts": {
-    "start": "node main.js",
+    "start": "echo 8090 | node main.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "test:full": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
