@@ -1,5 +1,7 @@
 # letter-count
 
+[ShieldsIO:](https://shields.io)
+
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
 [![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
 [![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
