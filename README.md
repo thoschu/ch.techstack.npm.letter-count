@@ -1,5 +1,7 @@
 # letter-count
 
+https://shields.io
+
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
 [![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
 [![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
@@ -11,8 +13,6 @@
 [![GitHub license](https://img.shields.io/github/license/thoschu/de.schulte360.npm.letter-count.svg)](https://github.com/thoschu/de.schulte360.npm.letter-count/blob/master/LICENSE)
 
 [![NPM Badge](https://nodei.co/npm/letter-count.png?downloads=true)](https://www.npmjs.com/package/letter-count)
-
-https://shields.io
 
 
 <img src="https://www.thomas-schulte.de/images/letter-count.png" width="196" height="196" align="right" hspace="12" />
