@@ -3,7 +3,6 @@
 const Util = require('util'),
     Chalk = require('chalk'),
     R = require('ramda'),
-    Emoji = require('node-emoji'),
     Lc = require('../lib/index');
 
 const N = R.always(null);
@@ -28,8 +27,7 @@ const U = R.always(undefined);
                 option: U(),
                 origin: U(),
                 words: zero,
-                wordsigns: zero,
-                emoji: Emoji.random().emoji
+                wordsigns: zero
             };
 
             result = R.concat(label, R.toString(resultObject));
@@ -49,8 +47,7 @@ const U = R.always(undefined);
                     option = Chalk.green('-a'),
                     origin = Chalk.green(firstElementOfArgumentsArr),
                     words = Chalk.green(countResultObject.words),
-                    wordsigns = Chalk.green(countResultObject.wordsigns),
-                    emoji = Emoji.random().emoji;
+                    wordsigns = Chalk.green(countResultObject.wordsigns);
 
                 resultObject = {
                     chars,
@@ -61,8 +58,7 @@ const U = R.always(undefined);
                     option,
                     origin,
                     words,
-                    wordsigns,
-                    emoji
+                    wordsigns
                 };
 
                 result = R.concat(label, R.toString(resultObject));
@@ -142,7 +138,8 @@ const U = R.always(undefined);
         }
 
         Util.log(result);
+        // process.stdout.write(err);
     } catch(err) {
-        process.stdout.write(err);
+        process.stderr.write(err);
     }
 })(R.prop('argv', process));

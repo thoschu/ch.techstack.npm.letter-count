@@ -13,7 +13,6 @@ function copyTask1(done) {
     gulp.src([
         'README.md',
         'package.json',
-        'package-lock.json',
         'LICENSE',
     ]).pipe(gulp.dest('build'));
 
@@ -30,8 +29,8 @@ function copyTask2(done) {
 
 function copyTask3(done) {
     gulp.src([
-        'lib/index.js',
         'lib/tasks.js',
+        'lib/index.js'
     ]).pipe(gulp.dest('build/lib'));
 
     done();

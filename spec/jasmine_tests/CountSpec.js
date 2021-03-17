@@ -1,5 +1,4 @@
-const Util = require('util'),
-    R = require('ramda');
+const R = require('ramda');
 
 describe("letter-count.js tests", function () {
     let LC = require('../../lib');

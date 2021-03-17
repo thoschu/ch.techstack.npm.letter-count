@@ -2,7 +2,7 @@ const http = require('http'),
     url = require('url'),
     R = require('ramda');
 
-const LC = require('./lib/index');
+const LC = require('./lib'); // const LC = require('./lib/index');
 
 http.createServer((req, res) => {
     let count = null;
