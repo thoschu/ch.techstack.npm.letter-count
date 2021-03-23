@@ -290,9 +290,17 @@ $ letter-count -ws germany!
 #=> 1 Jan 12:00:00 - germany! : {"wordsigns": 1, "origin": "germany!"}
 ```
 
-##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
+##### To get a hash, use the the `-hs`/`--hash` option:
 ```bash
 $ letter-count -hs hamburg
+#=> 1 Jan 12:00:00 - hamburg : {"hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "origin": "hamburg"}
+```
+
+##### To count in interactive mode, use the the `-i`/`--interactive` option:
+```bash
+$ letter-count -i
+$ Input please: `hamburg`
+$ Option please: `-a` #All options like above
 #=> 1 Jan 12:00:00 - germany! : {"hash": 1, "origin": "germany!"}
 ```
 

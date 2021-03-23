@@ -3,6 +3,7 @@
 const Util = require('util'),
     Chalk = require('chalk'),
     R = require('ramda'),
+    Rl = require('readline'),
     Lc = require('../lib/index');
 
 const N = R.always(null);
@@ -31,12 +32,50 @@ const U = R.always(undefined);
             };
 
             result = R.concat(label, R.toString(resultObject));
+
+            Util.log(result);
         } else {
             let cleanedArgumentsArr = R.drop(2, argumentsArr),
                 firstElementOfArgumentsArr = R.nth(0, cleanedArgumentsArr),
                 optionsElementOfArgumentsArr = R.nth(-1, cleanedArgumentsArr);
 
-            if (R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr)) {
+            if(R.not(R.isNil(cleanedArgumentsArr.find(element => R.or(R.equals(element, "-i"), R.equals(element, "--interactive")))))) {
+                let returnObj = {};
+
+                const rl = Rl.createInterface({
+                    input: process.stdin,
+                    output: process.stdout
+                });
+
+                const promisedQuestion = question => {
+                    return new Promise((resolve, reject) => {
+                        try {
+                            rl.question(question, answer => {
+                                resolve(answer);
+                            });
+                        } catch (error) {
+                            reject(error);
+                        }
+                    });
+                }
+
+                promisedQuestion("Input please: ").then(toCount => {
+                    returnObj = R.assoc('count', toCount, returnObj);
+
+                    return promisedQuestion("Option please: ");
+                }).then(option => {
+                    returnObj = R.assoc('option', option, returnObj);
+                }).then(() => {
+                    const label = R.concat(Chalk.blue.bold(returnObj.count), ' : ');
+
+                    returnObj = Lc.count(returnObj.option, returnObj.count);
+                    result = R.concat(label, R.toString(R.map(x => Chalk.green(x), returnObj)));
+
+                    Util.log(result);
+
+                    process.exit();
+                });
+            } else if (R.equals(optionsElementOfArgumentsArr, firstElementOfArgumentsArr)) {
                 let label = R.concat(Chalk.blue.bold(firstElementOfArgumentsArr), ' : '),
                     countResultObject = Lc.count(firstElementOfArgumentsArr),
                     chars = Chalk.green(countResultObject.chars),
@@ -62,6 +101,8 @@ const U = R.always(undefined);
                 };
 
                 result = R.concat(label, R.toString(resultObject));
+
+                Util.log(result);
             } else {
                 let option = cleanedArgumentsArr.shift(-1, 1),
                     inputArr = R.clone(cleanedArgumentsArr),
@@ -104,6 +145,10 @@ const U = R.always(undefined);
                     case '--hash':
                         option = '-hs';
                         break;
+                    case '-i':
+                    case '--interactive':
+                        option = '-i';
+                        break;
                     default:
                         option = '-a';
                 }
@@ -134,10 +179,11 @@ const U = R.always(undefined);
                 }
 
                 result = R.concat(label, R.toString(R.map(x => Chalk.green(x), resultObject)));
+
+                Util.log(result);
             }
         }
 
-        Util.log(result);
         // process.stdout.write(err);
     } catch(err) {
         process.stderr.write(err);
