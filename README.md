@@ -186,7 +186,7 @@ const Log = console.log;
 Log(lc.info()); 
 //=>  { 
 //      name: 'letter-count',
-//      version: '0.0.1',
+//      version: '3.2.0',
 //      description: 'This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
 //      author: { 
 //          name: 'Tom S.', 
@@ -209,7 +209,7 @@ lc.info('--name');
 ##### `-v` or `--version` 
 ```javascript
 lc.info('--version'); 
-//=> 0.0.1
+//=> 3.2.0
 ```
 
 #### Returns only the project description:
@@ -299,9 +299,9 @@ $ letter-count -hs hamburg
 ##### To count in interactive mode, use the the `-i`/`--interactive` option:
 ```bash
 $ letter-count -i
-$ Input please: `hamburg`
-$ Option please: `-a` #All options like above
-#=> 1 Jan 12:00:00 - germany! : {"hash": 1, "origin": "germany!"}
+$ Input please: <span style="color:blue">hamburg</span>
+$ Option please: -a       
+#=> 1 Jan 12:00:00 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "option": "-a", "origin": "hamburg", "words": "1", "wordsigns": "0"}
 ```
 
 ##### To count in a file, use the the `-f`/`--file` option and the path to the file:
