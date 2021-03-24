@@ -3,6 +3,7 @@ const pjson = require('./package.json');
 
 program
     .version(pjson.version)
+    .option('-l, --level <n>', 'set level (1-3)', parseInt, 1)
     .option('-c, --config <path>', 'set config path', './deploy.conf');
 
 program
@@ -16,7 +17,7 @@ program
     })
     .addHelpText('after', `
         Examples:
-        $ node test.js -c ../config.conf setup -s low test
+        $ node test.js -l 77 setup -s low test
         $ node test.js -c ../config.conf setup staging
         $ node test.js setup live
   `);
