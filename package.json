@@ -47,6 +47,7 @@
   "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
   "preferGlobal": false,
   "devDependencies": {
+    "commander": "^7.2.0",
     "concurrently": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-gzip": "^1.4.2",

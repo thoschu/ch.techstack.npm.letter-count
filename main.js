@@ -13,14 +13,12 @@ const rl = readline.createInterface({
 process.stdin.on('data',data => {
     const payload = data.toString();
     const reg = new RegExp('[8-9][0-9][0-9][0-9]');
-    const port = (payload === undefined || payload === null || !reg.test(payload)) ? '8080' : payload;
+    const port = R.or(R.isNil(payload), R.not(reg.test(payload))) ? '8080' : payload;
     let counter = 0;
 
     http.createServer((req, res) => {
         let count = null;
         let option = null;
-
-
 
         rl.question("Run: ", param => {
             console.log(param);

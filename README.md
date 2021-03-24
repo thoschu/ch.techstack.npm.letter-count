@@ -299,7 +299,7 @@ $ letter-count -hs hamburg
 ##### To count in interactive mode, use the the `-i`/`--interactive` option:
 ```bash
 $ letter-count -i
-$ Input please: <span style="color:blue">hamburg</span>
+$ Input please: hamburg
 $ Option please: -a       
 #=> 1 Jan 12:00:00 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "option": "-a", "origin": "hamburg", "words": "1", "wordsigns": "0"}
 ```
