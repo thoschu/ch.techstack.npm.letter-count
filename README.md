@@ -316,6 +316,7 @@ lc.countFromFile('--hash', '/path/to/file.txt');
 ```
 
 ### 📍 info([option]) `ECMAScript module`:
+⚠ no Browser support ⚠
 ```javascript
 import { info } from 'letter-count';
 
@@ -335,7 +336,7 @@ Log(info());
 ```
 
 ### 📍 lc.info([option]) `CommonJS module`:
-
+⚠ no Browser support ⚠
 ```javascript
 const lc = require('letter-count');
 
