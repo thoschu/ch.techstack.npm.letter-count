@@ -24,13 +24,33 @@ Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or 
 
 ## Installation
 
+Via [npx](https://www.npmjs.com/package/npx):
+
+```bash
+$ npx letter-count "Hamburg - \nGermany 325!"
+```
+
+Via [yarn](https://yarnpkg.com/):
+
+```bash
+$ yarn add letter-count
+```
+
 Via [npm](https://www.npmjs.com/):
 
 ```bash
 $ npm install letter-count
 ```
 
-In [Node.js](https://nodejs.org/):
+## Usage
+
+[ECMAScript modules](https://nodejs.org/api/esm.html#modules-ecmascript-modules):
+
+```javascript
+import { count, countFromFile, info } from 'letter-count';
+```
+
+[CommonJS modules](https://nodejs.org/docs/latest/api/modules.html#modules-commonjs-modules):
 
 ```javascript
 const lc = require('letter-count');
@@ -38,9 +58,32 @@ const lc = require('letter-count');
 
 ## API
 
-## `lc.count([option], value)`
+### 📍 count([option], value) `ECMAScript modules`:
 
 ```javascript
+import { count } from 'letter-count';
+
+const Log = console.log;
+
+Log(count("Hamburg - \nGermany 137!")); 
+//=> { 
+//      origin: 'Hamburg - \nGermany 137!', 
+//      chars: 23, 
+//      lines: 2, 
+//      words: 2, 
+//      numbers: 3, 
+//      option: '-a',
+//      letters: 14, 
+//      wordsigns: 2, 
+//      hash: 'd559d4e0ad0770ec6940e6892a9c921b' 
+//  }
+```
+
+### 📍 lc.count([option], value) `CommonJS modules`:
+
+```javascript
+const lc = require('letter-count');
+
 const Log = console.log;
 
 Log(lc.count("Hamburg - \nGermany 137!")); 
@@ -57,60 +100,119 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 //  }
 ```
 
-### ➔ The optional `option` argument accepts a string with the following options:
+#### ➔ The optional `option` argument accepts a string with the following options:
 
-#### Counts only the characters:
-##### `-c` or `--chars` 
+##### Counts only the characters:
+###### `-c` or `--chars` 
 ```javascript
-lc.count('-c', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-c', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--chars', "Hamburg - \nGermany 137!");
+
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
-#### Counts only the lines:
-##### `-ln` or `--lines` 
+##### Counts only the lines:
+###### `-ln` or `--lines` 
 ```javascript
-lc.count('-ln', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-ln', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--lines', "Hamburg - \nGermany 137!"); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
-#### Counts only the characters:
-##### `-w` or `--words` 
+##### Counts only the characters:
+###### `-w` or `--words` 
 ```javascript
-lc.count('-w', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-w', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--words', "Hamburg - \nGermany 137!"); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
-#### Counts only the numbers:
-##### `-n` or `--numbers` 
+##### Counts only the numbers:
+###### `-n` or `--numbers` 
 ```javascript
-lc.count('-n', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-n', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--numbers', "Hamburg - \nGermany 137!"); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
-#### Counts only the letters:
-##### `-l` or `--letters` 
+##### Counts only the letters:
+###### `-l` or `--letters` 
 ```javascript
-lc.count('-l', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-l', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--letters', "Hamburg - \nGermany 137!"); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
-#### MD5 hash:
-##### `-hs` or `--hash` 
+##### MD5 hash:
+###### `-hs` or `--hash` 
 ```javascript
-lc.count('-hs', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-hs', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--hash', "Hamburg - \nGermany 137!"); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', hash: '6bee63bbc6c56f61fbfd19f1429ad4a3' }
 ```
 
-#### Counts only the words sings:
-##### `-ws` or `--wordsigns`
+##### Counts only the words sings:
+###### `-ws` or `--wordsigns`
 ```javascript
-lc.count('-ws', "Hamburg - \nGermany 137!"); 
+// ECMAScript
+count('-ws', "Hamburg - \nGermany 137!");
+
+// CommonJS
+lc.count('--wordsigns', "Hamburg - \nGermany 137!"); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
-## `lc.countFromFile([option], file)`
+### 📍 countFromFile([option], file) `ECMAScript modules`:
+⚠ no Browser support ⚠
+```javascript
+import { countFromFile } from 'letter-count';
+
+const Log = console.log;
+
+Log(countFromFile('/path/to/file.txt')); 
+//=> { 
+//      origin: 'Hamburg - \nGermany 137!', 
+//      chars: 23, 
+//      lines: 2, 
+//      words: 2, 
+//      numbers: 3, 
+//      option: '-a',
+//      letters: 14,
+//      wordsigns: 2, 
+//      hash: 'd559d4e0ad0770ec6940e6892a9c921b' 
+// }
+```
+
+### 📍 lc.countFromFile([option], file) `CommonJS module`: 
+⚠ no Browser support ⚠
 
 ```javascript
+const lc = require('letter-count');
+
 const Log = console.log;
 
 Log(lc.countFromFile('/path/to/file.txt')); 
@@ -127,60 +229,116 @@ Log(lc.countFromFile('/path/to/file.txt'));
 // }
 ```
 
-### ➔ The optional `option` argument accepts a string with the following options:
+#### ➔ The optional `option` argument accepts a string with the following options:
 
-#### Counts only the characters:
-##### `-c` or `--chars` 
+##### Counts only the characters:
+###### `-c` or `--chars` 
 ```javascript
+// ECMAScript
+countFromFile('-c', '/path/to/file.txt');
+
+// CommonJS
 lc.countFromFile('--chars', '/path/to/file.txt'); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
 
 #### Counts only the lines:
 ##### `-ln` or `--lines` 
 ```javascript
+// ECMAScript
+countFromFile('-ln', '/path/to/file.txt');
+
+// CommonJS
 lc.countFromFile('--lines', '/path/to/file.txt'); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
 #### Counts only the words:
 ##### `-w` or `--words` 
 ```javascript
+// ECMAScript
+countFromFile('-w', '/path/to/file.txt');
+
+// CommonJS
 lc.countFromFile('--words', '/path/to/file.txt'); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
 
 #### Counts only the numbers:
 ##### `-n` or `--numbers` 
 ```javascript
-lc.countFromFile('--numbers', '/path/to/file.txt'); 
+// ECMAScript
+countFromFile('-n', '/path/to/file.txt');
+
+// CommonJS
+lc.countFromFile('--numbers', '/path/to/file.txt');
+
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
 #### Counts only the letters:
 ##### `-l` or `--letters` 
 ```javascript
+// ECMAScript
+countFromFile('-l', '/path/to/file.txt');
+
+// CommonJS
 lc.countFromFile('--letters', '/path/to/file.txt'); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
 
 #### Counts only the word signs:
 ##### `-ws` or `--wordsigns` 
 ```javascript
+// ECMAScript
+countFromFile('-ws', '/path/to/file.txt');
+
+// CommonJS
 lc.countFromFile('--wordsigns', '/path/to/file.txt'); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
 #### MD5 hash:
 ##### `-hs` or `--hash`
 ```javascript
+// ECMAScript
+countFromFile('-hs', '/path/to/file.txt');
+
+// CommonJS
 lc.countFromFile('--hash', '/path/to/file.txt'); 
+
 //=> { origin: 'Hamburg - \nGermany 137!', hash: '6bee63bbc6c56f61fbfd19f1429ad4a3' }
 ```
 
-## `lc.info([option])`
+### 📍 info([option]) `ECMAScript module`:
+```javascript
+import { info } from 'letter-count';
+
+const Log = console.log;
+
+Log(info()); 
+//=>  { 
+//      name: 'letter-count',
+//      version: '0.0.1',
+//      description: 'This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
+//      author: { 
+//          name: 'Tom S.', 
+//          email: 'thoschulte@gmail.com' 
+//      },
+//      license: 'MIT' 
+//  }
+```
+
+### 📍 lc.info([option]) `CommonJS module`:
 
 ```javascript
+const lc = require('letter-count');
+
 const Log = console.log;
 
 Log(lc.info()); 
@@ -196,47 +354,13 @@ Log(lc.info());
 //  }
 ```
 
-### ➔ The optional `option` argument accepts a string with the following options:
-
-#### Returns only the project name:
-##### `-n` or `--name` 
-```javascript
-lc.info('--name'); 
-//=> letter-count
-```
-
-#### Returns only the project version:
-##### `-v` or `--version` 
-```javascript
-lc.info('--version'); 
-//=> 0.0.1
-```
-
-#### Returns only the project description:
-##### `-d` or `--description` 
-```javascript
-lc.info('--description'); 
-//=> e.g. This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.
-```
-
-#### Returns only the project author:
-##### `-a` or `--author` 
-```javascript
-lc.info('--author'); 
-//=> { 
-// name: 'Tom S.', email: 'thoschulte@gmail.com' }
-```
-
-#### Returns only the project license:
-##### `-l` or `--license` 
-```javascript
-lc.info('--license'); 
-//=> MIT
-```
-
 ## Using the `letter-count` binary
 
 #### To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
+
+```bash
+$ npx letter-count "Hamburg - \nGermany 325!"
+```
 
 ```bash
 $ npm install -g letter-count 
