@@ -5,7 +5,14 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "bin": "bin/letter-count.js",
-  "browser": { "fs": false, "os": false, "path": false, "readline": false, "util": false, "process": false },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false,
+    "readline": false,
+    "util": false,
+    "process": false
+  },
   "private": false,
   "scripts": {
     "start": "node main.js",
@@ -16,7 +23,8 @@
     "build": "concurrently gulp",
     "build:full": "concurrently \"npm run code\" \"npm run doc\"",
     "npm:deprecate": "npm deprecate letter-count \"Under construction\"",
-    "find:path": "npm config get prefix"
+    "find:path": "npm config get prefix",
+    "npm:publish": "npm publish"
   },
   "repository": {
     "type": "git",
