@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // declare module 'letter-count' {
 //   export function countFromFile(
 //     option: string,
@@ -11,18 +13,26 @@
 // }
 // index.d.ts
 declare module 'letter-count' {
-  interface CountParamI {
-    option?: string;
-    value: string;
-    path: string;
-  }
-
-  export type CountResult = Record<string, string | number>;
-  export type CountParam = Omit<CountParamI, 'path'> | string;
-  export type CountFromFileParam = Omit<CountParamI, 'value'> | string;
-
-  //export const count: (option: string, value: string) => CountResult;
-  export const count: (value: CountParam) => CountResult;
-  export function countFromFile(value: CountFromFileParam): CountResult;
-  export const info: () => CountResult;
+    export enum CountOption {
+        '-a',
+        '--all',
+        '-c',
+        '--chars',
+        '-ln',
+        '--lines',
+        '-w',
+        '--words',
+        '-n',
+        '--numbers',
+        '-l',
+        '--letters',
+        '-ws',
+        '--wordsigns',
+        '-hs',
+        '--hash'
+    }
+    export type CountResult = Record<string, string | number>;
+    export const count: (option?: CountOption, value?: string) => CountResult;
+    export function countFromFile(options?: CountOption, filePath?: string): CountResult;
+    export const info: () => CountResult;
 }

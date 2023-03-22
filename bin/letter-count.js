@@ -1,21 +1,29 @@
 #!/usr/bin/env node
 
-const Util = require('util'),
-    Chalk = require('chalk'),
+const Chalk = require('chalk'),
     R = require('ramda'),
     Lc = require('../lib/index');
 
-const N = R.always(null);
-const U = R.always(undefined);
-
 (argumentsArr => {
+    const locale = Intl.DateTimeFormat().resolvedOptions().locale,
+        date = new Date(),
+        localeStr = date.toLocaleString(locale, {
+            hour12: false,
+            day: "2-digit",
+            hour: "2-digit",
+            minute: '2-digit',
+            second: "2-digit",
+            month: "long",
+            year: "numeric",
+        });
+
     try {
         let lengthArgumentsArr = R.length(argumentsArr),
-            resultObject = N(),
-            result = N();
+            resultObject = null,
+            result;
 
         if (R.equals(lengthArgumentsArr, 2)) {
-            let label = R.concat(Chalk.red.bold(U()), ' : '),
+            let label = R.concat(Chalk.red.bold(undefined), ' : '),
                 zero = R.always(0)();
 
             resultObject = {
@@ -24,8 +32,8 @@ const U = R.always(undefined);
                 letters: zero,
                 lines: zero,
                 numbers: zero,
-                option: U(),
-                origin: U(),
+                option: undefined,
+                origin: undefined,
                 words: zero,
                 wordsigns: zero
             };
@@ -112,7 +120,7 @@ const U = R.always(undefined);
                     whiteSpace = ' ';
 
                 R.forEach(x => {
-                    let tempStr = N();
+                    let tempStr;
 
                     if (R.equals(x, lastElementOfInputArr)) {
                         tempStr = x;
@@ -125,7 +133,7 @@ const U = R.always(undefined);
 
                 let chalkedResultString = Chalk.blue.bold(resultString),
                     label = R.concat(chalkedResultString, ' : '),
-                    resultObject = N();
+                    resultObject;
 
                 if(R.equals(option, '-f')) {
                     resultObject = Lc.countFromFile(option, resultString);
@@ -137,8 +145,7 @@ const U = R.always(undefined);
             }
         }
 
-        Util.log(result);
-        // process.stdout.write(err);
+        process.stdout.write(`${localeStr} - ${result}`);
     } catch(err) {
         process.stderr.write(err);
     }

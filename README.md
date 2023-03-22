@@ -1,17 +1,15 @@
 # letter-count
 
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
-[![Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count)
-[![Dev Dependency Status](https://david-dm.org/thoschu/de.schulte360.npm.letter-count/dev-status.svg)](https://david-dm.org/thoschu/de.schulte360.npm.letter-count?type=dev)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/thoschu/ch.techstack.npm.letter-count)
 [![Build Status](https://travis-ci.org/thoschu/ch.techstack.npm.letter-count.svg?branch=master)](https://travis-ci.org/thoschu/ch.techstack.npm.letter-count)
-[![Coverage Status](https://coveralls.io/repos/github/thoschu/de.schulte360.npm.letter-count/badge.svg?branch=master)](https://coveralls.io/github/thoschu/de.schulte360.npm.letter-count?branch=master)
-[![Code Climate](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count/badges/gpa.svg)](https://codeclimate.com/github/thoschu/de.schulte360.npm.letter-count)
-[![Known Vulnerabilities](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/de.schulte360.npm.letter-count)
-[![GitHub issues](https://img.shields.io/github/issues/thoschu/de.schulte360.npm.letter-count.svg)](https://github.com/thoschu/de.schulte360.npm.letter-count/issues)
-[![GitHub license](https://img.shields.io/github/license/thoschu/de.schulte360.npm.letter-count.svg)](https://github.com/thoschu/de.schulte360.npm.letter-count/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/thoschu/ch.techstack.npm.letter-count/badge.svg?branch=master)](https://coveralls.io/github/thoschu/ch.techstack.npm.letter-count?branch=master)
+[![Code Climate](https://codeclimate.com/github/thoschu/ch.techstack.npm.letter-count/badges/gpa.svg)](https://codeclimate.com/github/thoschu/ch.techstack.npm.letter-count)
+[![Known Vulnerabilities](https://snyk.io/test/github/thoschu/ch.techstack.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/ch.techstack.npm.letter-count)
+[![GitHub issues](https://img.shields.io/github/issues/thoschu/ch.techstack.npm.letter-count.svg)](https://github.com/thoschu/ch.techstack.npm.letter-count/issues)
+[![GitHub license](https://img.shields.io/github/license/thoschu/ch.techstack.npm.letter-count.svg)](https://github.com/thoschu/ch.techstack.npm.letter-count/blob/master/LICENSE)
 
 [![NPM Badge](https://nodei.co/npm/letter-count.png?downloads=true)](https://www.npmjs.com/package/letter-count)
-
 
 <img src="https://www.thomas-schulte.de/images/letter-count.png" width="196" height="196" align="right" hspace="12" />
 
@@ -370,61 +368,55 @@ $ npm install -g letter-count
 #### After that you’re able to count from the command line:
 ```bash
 $ letter-count hamburg 
-#=> 1 Jan 23:59:59 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "options": "-a", "origin": "hamburg", "words": "1", "wordsigns": "0"}
+#=> July 13, 2023 at 12:00:00 - hamburg : {"chars": "7", "hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "letters": "7", "lines": "1", "numbers": "0", "option": "-a", "origin": "hamburg", "words": "1", "wordsigns": "0"}
 ```
 
-##### To count only the character, use the the `-c`/`--char` option:
+##### To count only the character, use the `-c`/`--char` option:
 ```bash
 $ letter-count -c hamburg 
-#=> 1 Jan 23:59:59 - hamburg : {"chars": 7, "origin": "hamburg"}
+#=> July 13, 2023 at 12:00:00 - hamburg : {"chars": "7", "origin": "hamburg"}
 ```
 
-##### To count only the lines, use the the `-ln`/`--lines` option:
+##### To count only the lines, use the `-ln`/`--lines` option:
 ```bash
 $ letter-count -ln tom s. 
-#=> 1 Jan 12:00:00 - tom s. : {"lines": 1, "origin": "tom s."}
+#=> July 13, 2023 at 12:00:00 - tom s. : {"lines": "1", "origin": "tom s."}
 ```
 
-##### To count only the words, use the the `-w`/`--words` option:
+##### To count only the words, use the `-w`/`--words` option:
 ```bash
 $ letter-count -w tom hamburg 
-#=> 1 Jan 12:00:00 - tom hamburg : {"words": 2, "origin": "tom hamburg"}
+#=> July 13, 2023 at 12:00:00 - tom hamburg : {"origin": "tom hamburg", "words": "2"}
 ```
 
-##### To count only the words, use the the `-w`/`--words` option:
-```bash
-$ letter-count -hs tom
-#=> 1 Jan 12:00:00 - tom hamburg : {"words": 2, "origin": "tom hamburg"}
-```
-
-##### To count only the numbers, use the the `-n`/`--numbers` option:
+##### To count only the numbers, use the `-n`/`--numbers` option:
 ```bash
 $ letter-count -n hamburg 20457
-#=> 1 Jan 12:00:00 - hamburg 20457 : {"numbers": 5, "origin": "hamburg 20457"}
+#=> July 13, 2023 at 12:00:00 - hamburg 20097 : {"numbers": "5", "origin": "hamburg 20097"}
 ```
 
-##### To count only the letters, use the the `-l`/`--letters` option:
+##### To count only the letters, use the `-l`/`--letters` option:
 ```bash
 $ letter-count -l tom 13 hh
-#=> 1 Jan 12:00:00 - tom 13 hh : {"letters": 5, "origin": "tom 13 hh"}
+#=> July 13, 2023 at 12:00:00 - tom 13 hh : {"letters": "5", "origin": "tom 13 hh"}
 ```
 
-##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
+##### To count only the wordsigns, use the `-ws`/`--wordsigns` option:
 ```bash
 $ letter-count -ws germany!
-#=> 1 Jan 12:00:00 - germany! : {"wordsigns": 1, "origin": "germany!"}
+#=> July 13, 2023 at 12:00:00 - germany! : {"origin": "germany!", "wordsigns": "1"}
 ```
 
-##### To count only the wordsigns, use the the `-ws`/`--wordsigns` option:
+##### To generate a hash (MD5), use the `-hs`/`--hash` option:
 ```bash
 $ letter-count -hs hamburg
-#=> 1 Jan 12:00:00 - germany! : {"hash": 1, "origin": "germany!"}
+#=> July 13, 2023 at 12:00:00 - hamburg : {"hash": "f23bb5e2f7d35c767b40eddd42ac0e08", "origin": "hamburg"}
 ```
 
-##### To count in a file, use the the `-f`/`--file` option and the path to the file:
+##### To count in a file, use the `-f`/`--file` option and the path to the file:
 ```bash
 $ letter-count -f path/to/file/input.txt
-#=> 1 Jan 12:00:00 - test/input.txt : {"chars": 23, "hash": "fdf25c637725818100fae9d635edf787", "letters": 14, "lines": 2, "numbers": 3, "origin": "Hamburg -\r\nGermany 137!", "words": 2, "wordsigns": 2}
+#=> July 13, 2023 at 12:00:00 - path/to/file/input.txt : {"chars": "11", "hash": "374b094aaccf1fa849642a2de03d6dbe", "letters": "9", "lines": "2", "numbers": "0", "option": "-a", "origin": "foo\nbar baz", "words": "3", "wordsigns": "0"}
 ```
 
 ***

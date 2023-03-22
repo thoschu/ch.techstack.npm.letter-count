@@ -1,10 +1,12 @@
 {
   "name": "letter-count",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "bin": "bin/letter-count.js",
+  "bin": {
+    "letter-count": "bin/letter-count.js"
+  },
   "browser": {
     "fs": false,
     "os": false,
@@ -15,16 +17,28 @@
   },
   "private": false,
   "scripts": {
+    "i": "npm install",
     "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "start:ts": "nodemon --watch '**/*.ts' --exec 'ts-node' index.ts",
+    "start:ts:windows": "nodemon --watch '**/*.ts' --exec \"npx ts-node\" index.ts",
+    "test:ts": "node lib/ts/index.js help split",
     "test:full": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
     "doc": "jsdoc ./lib/index.js",
+    "build:ts": "tsc -p . ",
     "build": "concurrently gulp",
     "build:full": "concurrently \"npm run code\" \"npm run doc\"",
     "npm:deprecate": "npm deprecate letter-count \"Under construction\"",
     "find:path": "npm config get prefix",
-    "npm:publish": "npm publish"
+    "npm:publish": "npm publish",
+    "audit": "npm audit",
+    "outdated": "npm outdated",
+    "clean": "npx rimraf node_modules && npx rimraf package-lock.json",
+    "link": "npm link",
+    "view:version": "npm view letter-count version",
+    "list": "npm list",
+    "info:version": "npm info letter-count version",
+    "refresh": "npm run clean && npm run i"
   },
   "repository": {
     "type": "git",
@@ -57,22 +71,32 @@
   "homepage": "https://github.com/thoschu/de.schulte360.npm.letter-count#readme",
   "preferGlobal": false,
   "devDependencies": {
-    "concurrently": "^6.0.0",
-    "gulp": "^4.0.2",
+    "@types/clear": "^0.1.2",
+    "@types/figlet": "^1.5.5",
+    "@types/node": "^18.15.5",
+    "concurrently": "^7.6.0",
+    "gulp": "^3.9.1",
     "gulp-gzip": "^1.4.2",
-    "gulp-tar": "^3.1.0",
+    "gulp-tar": "^2.1.0",
     "istanbul": "^0.4.5",
-    "jasmine": "^3.6.4",
-    "jasmine-node": "^3.0.0",
-    "jasmine-reporters": "^2.3.2",
+    "jasmine": "^4.6.0",
+    "jasmine-node": "^1.16.0",
+    "jasmine-reporters": "^2.5.2",
     "jasmine-xml-reporter": "^1.2.1",
-    "jsdoc": "^3.6.6",
-    "shelljs": "^0.8.4"
+    "jsdoc": "^4.0.2",
+    "nodemon": "^2.0.21",
+    "shelljs": "^0.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^10.0.0",
+    "figlet": "^1.5.2",
     "md5": "^2.3.0",
-    "ramda": "^0.27.1"
+    "path": "^0.12.7",
+    "ramda": "^0.28.0"
   },
   "engines": {
     "node": ">=7"
