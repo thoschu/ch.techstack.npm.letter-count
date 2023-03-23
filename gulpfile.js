@@ -7,7 +7,7 @@ function clearTask(done) {
     shell.rm('-rf', 'build');
 
     done();
-};
+}
 
 function copyTask1(done) {
     gulp.src([
@@ -17,7 +17,7 @@ function copyTask1(done) {
     ]).pipe(gulp.dest('build'));
 
     done();
-};
+}
 
 function copyTask2(done) {
     gulp.src([
@@ -25,7 +25,7 @@ function copyTask2(done) {
     ]).pipe(gulp.dest('./build/bin'));
 
     done();
-};
+}
 
 function copyTask3(done) {
     gulp.src([
@@ -34,7 +34,7 @@ function copyTask3(done) {
     ]).pipe(gulp.dest('build/lib'));
 
     done();
-};
+}
 
 function copyTask4(done) {
     gulp.src([
@@ -43,13 +43,13 @@ function copyTask4(done) {
     ]).pipe(gulp.dest('./build/test'));
 
     done();
-};
+}
 
 function copyTask5(done) {
     gulp.src('spec/**/*').pipe(gulp.dest('build/spec'));
 
     done();
-};
+}
 
 function zipTask(done) {
     setTimeout(function () {
@@ -60,7 +60,7 @@ function zipTask(done) {
     }, 3000);
 
     done();
-};
+}
 
 gulp.task('clear', clearTask);
 

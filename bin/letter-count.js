@@ -136,9 +136,9 @@ const Chalk = require('chalk'),
                     resultObject;
 
                 if(R.equals(option, '-f')) {
-                    resultObject = Lc.countFromFile(option, resultString);
+                    resultObject = Lc.countFromFile(resultString, option);
                 } else {
-                    resultObject = Lc.count(option, resultString);
+                    resultObject = Lc.count(resultString, option);
                 }
 
                 result = R.concat(label, R.toString(R.map(x => Chalk.green(x), resultObject)));

@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+
     "target": "es5",
     "module": "commonjs",
     "lib": ["es6", "es2015", "dom"],
     "declaration": true,
     "declarationMap": true,
-    "outDir": "lib/ts",
+    "outDir": "lib/temp",
     "rootDir": "",
     "strict": true,
     "types": ["node"],

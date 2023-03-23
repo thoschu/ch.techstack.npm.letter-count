@@ -1,10 +1,7 @@
 # letter-count
 
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/thoschu/ch.techstack.npm.letter-count)
 [![Build Status](https://travis-ci.org/thoschu/ch.techstack.npm.letter-count.svg?branch=master)](https://travis-ci.org/thoschu/ch.techstack.npm.letter-count)
-[![Coverage Status](https://coveralls.io/repos/github/thoschu/ch.techstack.npm.letter-count/badge.svg?branch=master)](https://coveralls.io/github/thoschu/ch.techstack.npm.letter-count?branch=master)
-[![Code Climate](https://codeclimate.com/github/thoschu/ch.techstack.npm.letter-count/badges/gpa.svg)](https://codeclimate.com/github/thoschu/ch.techstack.npm.letter-count)
 [![Known Vulnerabilities](https://snyk.io/test/github/thoschu/ch.techstack.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/ch.techstack.npm.letter-count)
 [![GitHub issues](https://img.shields.io/github/issues/thoschu/ch.techstack.npm.letter-count.svg)](https://github.com/thoschu/ch.techstack.npm.letter-count/issues)
 [![GitHub license](https://img.shields.io/github/license/thoschu/ch.techstack.npm.letter-count.svg)](https://github.com/thoschu/ch.techstack.npm.letter-count/blob/master/LICENSE)
@@ -25,7 +22,7 @@ Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or 
 Via [npx](https://www.npmjs.com/package/npx):
 
 ```bash
-$ npx letter-count "Hamburg - \nGermany 325!"
+$ npx letter-count [options] "Hamburg - \nGermany 325!"
 ```
 
 Via [yarn](https://yarnpkg.com/):
@@ -56,14 +53,14 @@ const lc = require('letter-count');
 
 ## API
 
-### 📍 count([option], value) `ECMAScript modules`:
+### 📍 count(value, [option]) `ECMAScript modules`:
 
 ```javascript
 import { count } from 'letter-count';
 
 const Log = console.log;
 
-Log(count("Hamburg - \nGermany 137!")); 
+Log(count('Hamburg - \nGermany 137!')); 
 //=> { 
 //      origin: 'Hamburg - \nGermany 137!', 
 //      chars: 23, 
@@ -77,14 +74,14 @@ Log(count("Hamburg - \nGermany 137!"));
 //  }
 ```
 
-### 📍 lc.count([option], value) `CommonJS modules`:
+### 📍 lc.count(value, [option]) `CommonJS modules`:
 
 ```javascript
 const lc = require('letter-count');
 
 const Log = console.log;
 
-Log(lc.count("Hamburg - \nGermany 137!")); 
+Log(lc.count('Hamburg - \nGermany 137!')); 
 //=> { 
 //      origin: 'Hamburg - \nGermany 137!', 
 //      chars: 23, 
@@ -104,10 +101,10 @@ Log(lc.count("Hamburg - \nGermany 137!"));
 ###### `-c` or `--chars` 
 ```javascript
 // ECMAScript
-count('-c', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-c');
 
 // CommonJS
-lc.count('--chars', "Hamburg - \nGermany 137!");
+lc.count('Hamburg - \nGermany 137!', '--chars');
 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
@@ -116,10 +113,10 @@ lc.count('--chars', "Hamburg - \nGermany 137!");
 ###### `-ln` or `--lines` 
 ```javascript
 // ECMAScript
-count('-ln', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-ln');
 
 // CommonJS
-lc.count('--lines', "Hamburg - \nGermany 137!"); 
+lc.count('Hamburg - \nGermany 137!', '--lines'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
@@ -128,10 +125,10 @@ lc.count('--lines', "Hamburg - \nGermany 137!");
 ###### `-w` or `--words` 
 ```javascript
 // ECMAScript
-count('-w', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-w');
 
 // CommonJS
-lc.count('--words', "Hamburg - \nGermany 137!"); 
+lc.count('Hamburg - \nGermany 137!', '--words'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
@@ -140,10 +137,10 @@ lc.count('--words', "Hamburg - \nGermany 137!");
 ###### `-n` or `--numbers` 
 ```javascript
 // ECMAScript
-count('-n', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-n');
 
 // CommonJS
-lc.count('--numbers', "Hamburg - \nGermany 137!"); 
+lc.count('Hamburg - \nGermany 137!', '--numbers'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
@@ -152,10 +149,10 @@ lc.count('--numbers', "Hamburg - \nGermany 137!");
 ###### `-l` or `--letters` 
 ```javascript
 // ECMAScript
-count('-l', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-l');
 
 // CommonJS
-lc.count('--letters', "Hamburg - \nGermany 137!"); 
+lc.count('Hamburg - \nGermany 137!', '--letters'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
@@ -164,10 +161,10 @@ lc.count('--letters', "Hamburg - \nGermany 137!");
 ###### `-hs` or `--hash` 
 ```javascript
 // ECMAScript
-count('-hs', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-hs');
 
 // CommonJS
-lc.count('--hash', "Hamburg - \nGermany 137!"); 
+lc.count('Hamburg - \nGermany 137!', '--hash'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', hash: '6bee63bbc6c56f61fbfd19f1429ad4a3' }
 ```
@@ -176,15 +173,15 @@ lc.count('--hash', "Hamburg - \nGermany 137!");
 ###### `-ws` or `--wordsigns`
 ```javascript
 // ECMAScript
-count('-ws', "Hamburg - \nGermany 137!");
+count('Hamburg - \nGermany 137!', '-ws');
 
 // CommonJS
-lc.count('--wordsigns', "Hamburg - \nGermany 137!"); 
+lc.count('Hamburg - \nGermany 137!', '--wordsigns'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
 
-### 📍 countFromFile([option], file) `ECMAScript modules`:
+### 📍 countFromFile(file, [option]) `ECMAScript modules`:
 ⚠ no Browser support ⚠
 ```javascript
 import { countFromFile } from 'letter-count';
@@ -205,7 +202,7 @@ Log(countFromFile('/path/to/file.txt'));
 // }
 ```
 
-### 📍 lc.countFromFile([option], file) `CommonJS module`: 
+### 📍 lc.countFromFile(file, [option]) `CommonJS module`: 
 ⚠ no Browser support ⚠
 
 ```javascript
@@ -233,10 +230,10 @@ Log(lc.countFromFile('/path/to/file.txt'));
 ###### `-c` or `--chars` 
 ```javascript
 // ECMAScript
-countFromFile('-c', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-c');
 
 // CommonJS
-lc.countFromFile('--chars', '/path/to/file.txt'); 
+lc.countFromFile('/path/to/file.txt', '--chars'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', chars: 23 }
 ```
@@ -245,10 +242,10 @@ lc.countFromFile('--chars', '/path/to/file.txt');
 ##### `-ln` or `--lines` 
 ```javascript
 // ECMAScript
-countFromFile('-ln', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-ln');
 
 // CommonJS
-lc.countFromFile('--lines', '/path/to/file.txt'); 
+lc.countFromFile('/path/to/file.txt', '--lines'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
@@ -257,10 +254,10 @@ lc.countFromFile('--lines', '/path/to/file.txt');
 ##### `-w` or `--words` 
 ```javascript
 // ECMAScript
-countFromFile('-w', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-w');
 
 // CommonJS
-lc.countFromFile('--words', '/path/to/file.txt'); 
+lc.countFromFile('/path/to/file.txt', '--words'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', words: 2 }
 ```
@@ -269,10 +266,10 @@ lc.countFromFile('--words', '/path/to/file.txt');
 ##### `-n` or `--numbers` 
 ```javascript
 // ECMAScript
-countFromFile('-n', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-n');
 
 // CommonJS
-lc.countFromFile('--numbers', '/path/to/file.txt');
+lc.countFromFile('/path/to/file.txt', '--numbers');
 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
@@ -281,10 +278,10 @@ lc.countFromFile('--numbers', '/path/to/file.txt');
 ##### `-l` or `--letters` 
 ```javascript
 // ECMAScript
-countFromFile('-l', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-l');
 
 // CommonJS
-lc.countFromFile('--letters', '/path/to/file.txt'); 
+lc.countFromFile('/path/to/file.txt', '--letters'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', letters: 14 }
 ```
@@ -293,10 +290,10 @@ lc.countFromFile('--letters', '/path/to/file.txt');
 ##### `-ws` or `--wordsigns` 
 ```javascript
 // ECMAScript
-countFromFile('-ws', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-ws');
 
 // CommonJS
-lc.countFromFile('--wordsigns', '/path/to/file.txt'); 
+lc.countFromFile('/path/to/file.txt', '--wordsigns'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', wordsigns: 2 }
 ```
@@ -305,15 +302,15 @@ lc.countFromFile('--wordsigns', '/path/to/file.txt');
 ##### `-hs` or `--hash`
 ```javascript
 // ECMAScript
-countFromFile('-hs', '/path/to/file.txt');
+countFromFile('/path/to/file.txt', '-hs');
 
 // CommonJS
-lc.countFromFile('--hash', '/path/to/file.txt'); 
+lc.countFromFile('/path/to/file.txt', '--hash'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', hash: '6bee63bbc6c56f61fbfd19f1429ad4a3' }
 ```
 
-### 📍 info([option]) `ECMAScript module`:
+### 📍 info([key]) `ECMAScript module`:
 ⚠ no Browser support ⚠
 ```javascript
 import { info } from 'letter-count';
@@ -333,7 +330,7 @@ Log(info());
 //  }
 ```
 
-### 📍 lc.info([option]) `CommonJS module`:
+### 📍 lc.info([key]) `CommonJS module`:
 ⚠ no Browser support ⚠
 ```javascript
 const lc = require('letter-count');
@@ -343,7 +340,7 @@ const Log = console.log;
 Log(lc.info()); 
 //=>  { 
 //      name: 'letter-count',
-//      version: '0.0.1',
+//      version: '5.0.0',
 //      description: 'This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
 //      author: { 
 //          name: 'Tom S.', 
@@ -358,7 +355,7 @@ Log(lc.info());
 #### To use the `letter-count` binary in your shell, simply install letter-count globally using npm:
 
 ```bash
-$ npx letter-count "Hamburg - \nGermany 325!"
+$ npx letter-count [option] "Hamburg - \nGermany 325!"
 ```
 
 ```bash

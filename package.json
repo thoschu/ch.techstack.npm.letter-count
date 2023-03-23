@@ -1,6 +1,6 @@
 {
   "name": "letter-count",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -21,6 +21,7 @@
     "start": "node main.js",
     "start:ts": "nodemon --watch '**/*.ts' --exec 'ts-node' index.ts",
     "start:ts:windows": "nodemon --watch '**/*.ts' --exec \"npx ts-node\" index.ts",
+    "start:ts:build": "node lib/ts/index.js split --separator=/ a/b/c",
     "test:ts": "node lib/ts/index.js help split",
     "test:full": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
@@ -34,7 +35,7 @@
     "audit": "npm audit",
     "outdated": "npm outdated",
     "clean": "npx rimraf node_modules && npx rimraf package-lock.json",
-    "link": "npm link",
+    "link": "npm link letter-count",
     "view:version": "npm view letter-count version",
     "list": "npm list",
     "info:version": "npm info letter-count version",
@@ -73,7 +74,7 @@
   "devDependencies": {
     "@types/clear": "^0.1.2",
     "@types/figlet": "^1.5.5",
-    "@types/node": "^18.15.5",
+    "@types/node": "^18.15.6",
     "concurrently": "^7.6.0",
     "gulp": "^3.9.1",
     "gulp-gzip": "^1.4.2",
@@ -84,7 +85,7 @@
     "jasmine-reporters": "^2.5.2",
     "jasmine-xml-reporter": "^1.2.1",
     "jsdoc": "^4.0.2",
-    "nodemon": "^2.0.21",
+    "nodemon": "^2.0.22",
     "shelljs": "^0.8.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2"

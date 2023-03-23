@@ -1,29 +1,23 @@
-const http = require('http'),
-    url = require('url');
+const chalk = require('chalk'),
+    http = require('http'),
+    url = require('url'),
+    lc = require('./lib');
 
-const LC = require('./lib'); // const LC = require('./lib/index');
+const PORT = 8080;
+const HOST = '0.0.0.0';
 
 http.createServer((req, res) => {
-    let count = null;
-    let option = null;
+    let input, option = null;
 
     req.on('readable',() => {
-        // const queryObject = url.parse(req.url, true).query;
         const { query } = url.parse(req.url, true);
 
-        count = query.count ?? '' ;
+        input = query.input ?? 'letter-count by Tom S. © 2023' ;
         option = query.option ?? '-a';
     });
 
     req.on('end', () => {
-        // const countResult = LC.count(option, count);
-        const countResult = LC.count(count);
-
-        console.log(count);
-        console.log(option);
-        console.log(countResult);
-
-
+        const countResult = lc.count(input, option);
 
         res.writeHead(200, {
             'content-type': 'application/json'
@@ -33,7 +27,9 @@ http.createServer((req, res) => {
     });
 
     req.on('close', () => {
-        console.log('closed');
+        console.log(chalk.blue('%s'), 'closed');
     });
-
-}).listen(8080);
+}).listen(PORT, HOST, () => {
+    console.log(chalk.yellow.bold(`Running on: http://localhost:${PORT}`));
+    console.log(`Example: http://localhost:${PORT}/?input=hallo or http://localhost:${PORT}/?input=hallo&option=-c`);
+});

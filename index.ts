@@ -5,32 +5,24 @@ import { red } from 'chalk';
 import clear from 'clear';
 import { textSync } from 'figlet';
 import { Command } from 'commander';
+import { count, countFromFile, CountResult, info } from 'letter-count';
 
-import * as packageJson from './package.json';
+// console.log(count('thomas', '-w'));
+// console.log(countFromFile('package.json', '-c'));
+
+const infos: CountResult = info();
 
 clear();
-console.log(
-    red(
-        textSync(`letter-count-cli ${packageJson.version}`, { horizontalLayout: 'full' })
-    )
-);
-
-const program: Command = new Command();
-
-program
-    .name('letter-count-cli')
-    .description('CLI to some JavaScript string utilities')
-    .version(packageJson.version);
-
-program.command('split')
-    .description('Split a string into substrings and display as an array')
-    .argument('<string>', 'string to split')
-    .option('-s, --separator <char>', 'separator character', ',')
-    .action((str: string, options) => {
-        console.log(str);
-        console.log(options);
-        const limit = options.first ? 1 : 0;
-        console.log(str.split(options.separator, limit));
-    });
-
-program.parse();
+// console.log(red(textSync(`letter-count-cli ${infos.version}`, { horizontalLayout: 'full' })));
+//
+// const program: Command = new Command();
+//
+// program
+//     .name(infos.name)
+//     .description(infos.description)
+//     .version(infos.version)
+//     .description("An example CLI for ordering pizza's")
+//     .option('-v, --version', 'Add peppers')
+//     .option('-c, --char <type>', 'Add the specified type of foo [marble]')
+//     .option('-C, --no-char', 'You do not want any bar')
+//     .parse(process.argv);
