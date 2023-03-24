@@ -171,6 +171,18 @@ lc.count('Hamburg - \nGermany 13.7!', '--floats');
 //=> { origin: 'Hamburg - \nGermany 137!', floats: 1 }
 ```
 
+##### Counts only the spaces:
+###### `-s` or `--spaces`
+```javascript
+// ECMAScript
+count('Hamburg - \nGermany 13 7!', '-s');
+
+// CommonJS
+lc.count('Hamburg - \nGermany 13 7!', '--spaces'); 
+
+//=> { origin: 'Hamburg - \nGermany 13 7!', spaces: 4 }
+```
+
 ##### Counts only the letters:
 ###### `-l` or `--letters` 
 ```javascript
@@ -300,6 +312,42 @@ lc.countFromFile('/path/to/file.txt', '--numbers');
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
 ```
 
+#### Counts only the integers:
+##### `-int` or `--integers`
+```javascript
+// ECMAScript
+countFromFile('/path/to/file.txt', '-int');
+
+// CommonJS
+lc.countFromFile('/path/to/file.txt', '--integers');
+
+//=> { origin: 'Hamburg - \nGermany 137!', integers: 1 }
+```
+
+#### Counts only the floats:
+##### `-fl` or `--floats`
+```javascript
+// ECMAScript
+countFromFile('/path/to/file.txt', '-fl');
+
+// CommonJS
+lc.countFromFile('/path/to/file.txt', '--floats');
+
+//=> { origin: 'Hamburg - \nGermany 13.7!', floats: 1 }
+```
+
+#### Counts only the spaces:
+##### `-s` or `--spaces`
+```javascript
+// ECMAScript
+countFromFile('/path/to/file.txt', '-s');
+
+// CommonJS
+lc.countFromFile('/path/to/file.txt', '--spaces');
+
+//=> { origin: 'Hamburg - \nGermany 13 7!', spaces: 4 }
+```
+
 #### Counts only the letters:
 ##### `-l` or `--letters` 
 ```javascript
@@ -410,8 +458,26 @@ $ letter-count -w tom hamburg
 
 ##### To count only the numbers, use the `-n`/`--numbers` option:
 ```bash
-$ letter-count -n hamburg 20457
+$ letter-count -n hamburg 20097
 #=> July 13, 2023 at 12:00:00 - hamburg 20097 : {"numbers": "5", "origin": "hamburg 20097"}
+```
+
+##### To count only the integers, use the `-int`/`--integers` option:
+```bash
+$ letter-count -int hamburg 20097
+#=> July 13, 2023 at 12:00:00 - hamburg 20097 : {"integers": "1", "origin": "hamburg 20097"}
+```
+
+##### To count only the floats, use the `-fl`/`--floats` option:
+```bash
+$ letter-count -fl hamburg 13.7
+#=> July 13, 2023 at 12:00:00 - hamburg 13.7 : {"floats": "1", "origin": "hamburg 13.7"}
+```
+
+##### To count only the spaces, use the `-s`/`--spaces` option:
+```bash
+$ letter-count -s hamburg tom npm
+#=> July 13, 2023 at 12:00:00 - hamburg tom npm : {"spaces": "2", "origin": "hamburg tom npm"}
 ```
 
 ##### To count only the letters, use the `-l`/`--letters` option:

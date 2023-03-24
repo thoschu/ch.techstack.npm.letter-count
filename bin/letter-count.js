@@ -54,6 +54,7 @@ const Chalk = require('chalk'),
                     numbers = Chalk.green(countResultObject.numbers),
                     integers = Chalk.green(countResultObject.integers),
                     floats = Chalk.green(countResultObject.floats),
+                    spaces = Chalk.green(countResultObject.spaces),
                     option = Chalk.green('-a'),
                     origin = Chalk.green(firstElementOfArgumentsArr),
                     words = Chalk.green(countResultObject.words),
@@ -67,10 +68,11 @@ const Chalk = require('chalk'),
                     numbers,
                     integers,
                     floats,
+                    spaces,
+                    words,
+                    wordsigns,
                     option,
                     origin,
-                    words,
-                    wordsigns
                 };
 
                 result = R.concat(label, R.toString(resultObject));
@@ -111,6 +113,10 @@ const Chalk = require('chalk'),
                     case '-l':
                     case '--letters':
                         option = '-l';
+                        break;
+                    case '-s':
+                    case '--spaces':
+                        option = '-s';
                         break;
                     case '-ws':
                     case '--wordsigns':

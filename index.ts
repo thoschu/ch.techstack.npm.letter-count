@@ -7,7 +7,7 @@ import { textSync } from 'figlet';
 import { Command } from 'commander';
 import { count, countFromFile, CountResult, info } from 'letter-count';
 
-console.log(count('The quick brown fox jumps over the lazy 5.5 dog 4567', '-int'));
+console.log(count('The quick brown fox jumps over the lazy -5.5 dog -4567 ', '-s'));
 // console.log(countFromFile('package.json', '-c'));
 
 // const infos: CountResult = info();
