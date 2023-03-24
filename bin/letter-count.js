@@ -52,6 +52,8 @@ const Chalk = require('chalk'),
                     letters = Chalk.green(countResultObject.letters),
                     lines = Chalk.green(countResultObject.lines),
                     numbers = Chalk.green(countResultObject.numbers),
+                    integers = Chalk.green(countResultObject.integers),
+                    floats = Chalk.green(countResultObject.floats),
                     option = Chalk.green('-a'),
                     origin = Chalk.green(firstElementOfArgumentsArr),
                     words = Chalk.green(countResultObject.words),
@@ -63,6 +65,8 @@ const Chalk = require('chalk'),
                     letters,
                     lines,
                     numbers,
+                    integers,
+                    floats,
                     option,
                     origin,
                     words,
@@ -95,6 +99,14 @@ const Chalk = require('chalk'),
                     case '-n':
                     case '--numbers':
                         option = '-n';
+                        break;
+                    case '-int':
+                    case '--integers':
+                        option = '-int';
+                        break;
+                    case '-fl':
+                    case '--floats':
+                        option = '-fl';
                         break;
                     case '-l':
                     case '--letters':

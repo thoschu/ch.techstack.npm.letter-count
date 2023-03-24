@@ -7,12 +7,12 @@ import { textSync } from 'figlet';
 import { Command } from 'commander';
 import { count, countFromFile, CountResult, info } from 'letter-count';
 
-// console.log(count('thomas', '-w'));
+console.log(count('The quick brown fox jumps over the lazy 5.5 dog 4567', '-int'));
 // console.log(countFromFile('package.json', '-c'));
 
-const infos: CountResult = info();
+// const infos: CountResult = info();
 
-clear();
+// clear();
 // console.log(red(textSync(`letter-count-cli ${infos.version}`, { horizontalLayout: 'full' })));
 //
 // const program: Command = new Command();

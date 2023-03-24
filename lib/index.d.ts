@@ -11,6 +11,8 @@ declare module 'letter-count' {
         '-ln'| '--lines'|
         '-w'| '--words'|
         '-n'| '--numbers'|
+        '-int'| '--integers'|
+        '-fl'| '--floats'|
         '-l'| '--letters'|
         '-ws'| '--wordsigns'|
         '-hs'| '--hash';

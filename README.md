@@ -22,7 +22,9 @@ Whether it is Snapchat, Twitter, Facebook, Yelp or just a note to co-workers or 
 Via [npx](https://www.npmjs.com/package/npx):
 
 ```bash
-$ npx letter-count [options] "Hamburg - \nGermany 325!"
+$ npx letter-count "Hamburg - \nGermany 325!"
+
+$ npx letter-count -int "Hamburg - \nGermany 325!"
 ```
 
 Via [yarn](https://yarnpkg.com/):
@@ -143,6 +145,30 @@ count('Hamburg - \nGermany 137!', '-n');
 lc.count('Hamburg - \nGermany 137!', '--numbers'); 
 
 //=> { origin: 'Hamburg - \nGermany 137!', numbers: 3 }
+```
+
+##### Counts only the integers:
+###### `-int` or `--integers`
+```javascript
+// ECMAScript
+count('Hamburg - \nGermany 137!', '-int');
+
+// CommonJS
+lc.count('Hamburg - \nGermany 137!', '--integers'); 
+
+//=> { origin: 'Hamburg - \nGermany 137!', integers: 1 }
+```
+
+##### Counts only the floats:
+###### `-fl` or `--floats`
+```javascript
+// ECMAScript
+count('Hamburg - \nGermany 13.7!', '-fl');
+
+// CommonJS
+lc.count('Hamburg - \nGermany 13.7!', '--floats'); 
+
+//=> { origin: 'Hamburg - \nGermany 137!', floats: 1 }
 ```
 
 ##### Counts only the letters:
@@ -317,16 +343,12 @@ import { info } from 'letter-count';
 
 const Log = console.log;
 
-Log(info()); 
-//=>  { 
-//      name: 'letter-count',
-//      version: '0.0.1',
-//      description: 'This is a calculator which counts the number of letters/ characters/ lines/ words/ numbers or wordsigns in a text, useful for your tweets on Twitter, as well as a multitude of other applications.',
+Log(info('author')); 
+//=>  {
 //      author: { 
 //          name: 'Tom S.', 
 //          email: 'thoschulte@gmail.com' 
-//      },
-//      license: 'MIT' 
+//      }
 //  }
 ```
 
@@ -438,11 +460,13 @@ $ letter-count -f path/to/file/input.txt
 
 ## Links
 
-[Author](https://thomas-schulte.de)
+[Author](//thomas-schulte.de/disclaimer.html)
 
-[RTL - Games](https://spiele.rtl.de/)
+[RTL - Games](//spiele.rtl.de/rtlspiele/stadt-land-fluss-2-8131.html)
 
-[ShieldsIO](https://shields.io)
+[letter-count for Angular](//www.npmjs.com/package/ng-letter-count-2)
+
+[ShieldsIO](//shields.io)
 
 ***
 
