@@ -123,7 +123,7 @@ lc.count('Hamburg - \nGermany 137!', '--lines');
 //=> { origin: 'Hamburg - \nGermany 137!', lines: 2 }
 ```
 
-##### Counts only the characters:
+##### Counts only the words:
 ###### `-w` or `--words` 
 ```javascript
 // ECMAScript
