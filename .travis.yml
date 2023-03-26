@@ -4,7 +4,7 @@ node_js:
 cache:
   npm: false
 before_script:
-  - npm install letter-count
+  - npm ci
 script:
 #  - npm ci
   - npm test
