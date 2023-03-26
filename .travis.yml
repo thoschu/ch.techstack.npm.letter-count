@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 7
+  - node
 cache:
   npm: false
 before_script:
@@ -9,3 +9,5 @@ script:
 #  - npm ci
   - npm test
   #- npm run build
+#after_script:
+#  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
