@@ -7,7 +7,7 @@ describe("letter-count.js tests", function () {
         let counted = null;
 
         beforeAll(function () {
-            counted = LC.count("!thomas \n schulte7 \t hamburg ... ");
+            counted = LC.count("!thomas \n schulte7 \t hamburg 19.77 ... ");
         });
 
         it("1. should be able to count the number of letters in the given string", function () {
@@ -25,7 +25,7 @@ describe("letter-count.js tests", function () {
         it("3. should be able to count the number of characters in the given string", function () {
             let result =  R.prop('chars', counted);
 
-            expect(33).toEqual(result);
+            expect(39).toEqual(result);
         });
 
         it("4. should be able to count the number of words in the given string", function () {
@@ -37,14 +37,34 @@ describe("letter-count.js tests", function () {
         it("5. should be able to count the number of numbers in the given string", function () {
             let result =  R.prop('numbers', counted);
 
-            expect(1).toEqual(result);
+            expect(5).toEqual(result);
         });
 
         it("6. should be able to count the number of wordsigns in the given string", function () {
             let result =  R.prop('wordsigns', counted);
 
-            expect(4).toEqual(result);
+            expect(5).toEqual(result);
         });
+
+
+        it("7. should be able to count the number of spaces in the given string", function () {
+            let result =  R.prop('spaces', counted);
+
+            expect(9).toEqual(result);
+        });
+
+        it("8. should be able to count the number of floats in the given string", function () {
+            let result =  R.prop('floats', counted);
+
+            expect(1).toEqual(result);
+        });
+
+        it("9. should be able to count the number of integers in the given string", function () {
+            let result =  R.prop('integers', counted);
+
+            expect(1).toEqual(result);
+        });
+
     });
 
     describe("B. the countFromFile method", function() {

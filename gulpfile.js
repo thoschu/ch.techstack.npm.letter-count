@@ -29,8 +29,8 @@ function copyTask2(done) {
 
 function copyTask3(done) {
     gulp.src([
-        'lib/tasks.js',
-        'lib/index.js'
+        'lib/src/tasks.js',
+        'lib/src/index.js'
     ]).pipe(gulp.dest('build/lib'));
 
     done();
