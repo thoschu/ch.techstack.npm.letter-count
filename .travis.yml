@@ -3,9 +3,9 @@ node_js:
   - 7
 cache:
   npm: false
-#before_script:
-#  - npm install
+before_script:
+  - npm ci
 script:
-#  - npm run i
+#  - npm ci
   - npm test
   #- npm run build
