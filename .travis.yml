@@ -6,6 +6,6 @@ cache:
 #before_script:
 #  - npm install
 script:
-  - npm run i
+#  - npm run i
   - npm test
   #- npm run build
