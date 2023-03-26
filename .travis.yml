@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-  - 10
+  - 7
 cache:
   npm: false
-before_script:
-  - npm install
+#before_script:
+#  - npm install
 script:
+  - npm run i
   - npm test
   #- npm run build
