@@ -4,6 +4,7 @@ node_js:
 cache:
   npm: false
 before_script:
+  - npm link letter-count
   - npm run build:ts
 script:
 #  - npm ci
