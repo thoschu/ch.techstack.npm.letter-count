@@ -28,7 +28,7 @@
     "test:full": "node ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=./test/testresults/",
     "code": "concurrently \"istanbul cover ./node_modules/jasmine/bin/jasmine.js\" \"istanbul report cobertura\"",
     "doc": "jsdoc ./lib/index.js",
-    "build:ts": "tsc -p . ",
+    "build:ts": "tsc -p .",
     "build": "concurrently gulp",
     "build:full": "concurrently \"npm run code\" \"npm run doc\"",
     "npm:deprecate": "npm deprecate letter-count \"Under construction\"",
