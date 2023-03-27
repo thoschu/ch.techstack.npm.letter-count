@@ -1,7 +1,7 @@
 # letter-count
 
 [![npm version](https://badge.fury.io/js/letter-count.svg)](https://badge.fury.io/js/letter-count)
-[![Build Status](https://travis-ci.org/thoschu/ch.techstack.npm.letter-count.svg?branch=master)](https://travis-ci.org/thoschu/ch.techstack.npm.letter-count)
+[![Build Status](https://app.travis-ci.com/thoschu/ch.techstack.npm.letter-count.svg?branch=master)](https://app.travis-ci.com/github/thoschu/ch.techstack.npm.letter-count)
 [![Known Vulnerabilities](https://snyk.io/test/github/thoschu/ch.techstack.npm.letter-count/badge.svg)](https://snyk.io/test/github/thoschu/ch.techstack.npm.letter-count)
 [![GitHub issues](https://img.shields.io/github/issues/thoschu/ch.techstack.npm.letter-count.svg)](https://github.com/thoschu/ch.techstack.npm.letter-count/issues)
 [![GitHub license](https://img.shields.io/github/license/thoschu/ch.techstack.npm.letter-count.svg)](https://github.com/thoschu/ch.techstack.npm.letter-count/blob/master/LICENSE)
